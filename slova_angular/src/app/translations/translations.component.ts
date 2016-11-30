@@ -1,0 +1,40 @@
+import { Component, OnInit} from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+
+import { Translation } from './translation.model';
+import { TranslationService } from './translation.service';
+
+@Component({
+  moduleId: 'module.id',
+  selector: 'app-translations',
+  templateUrl: 'translations.component.html',
+  styleUrls: ['translations.component.css'],
+  providers: [TranslationService]
+})
+
+export class TranslationsComponent implements OnInit {
+
+  translations: Translation[];
+  filteredTranslations: Translation[];
+  errorMessage: string;
+  mode = "Observable";
+
+  constructor(private translationService: TranslationService) { }
+
+  ngOnInit(): void {
+    this.getTranslations();
+  }
+
+  getTranslations() {
+    this.translationService.getTranslations()
+        .subscribe(
+          translations => this.translations = translations,
+          error => this.errorMessage = <any>error
+        );
+  }
+
+  search(search:string) {
+    this.filteredTranslations = this.translations.filter(translation => translation.native.includes(search) || translation.target.includes(search) );
+  }
+
+}

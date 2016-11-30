@@ -1,0 +1,22 @@
+<div>
+  <md-toolbar color="primary">
+    <span>
+      <md-icon class="icon-20">language</md-icon>
+      Slova
+    </span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>menu</md-icon>
+    </button>
+  </md-toolbar>
+
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item (click)="openDialog()">Settings</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
+
+  <app-nav></app-nav>
+  
+</div>
+
+
+

@@ -1,0 +1,56 @@
+.search {
+  width: 25em;
+  position: relative;
+  height: 2.5em;
+  left: 2em;
+  margin: .25em;
+  padding: 0.3em 0.3em 0.3em 0;
+  width: 95%;
+  align-self: center;
+  height: 1.5em;
+  margin: 1.5em 0 1.5em 0;
+  font-size: medium;
+}
+
+/*.translations {
+  margin: 0 0 1em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+  font-size: larger;		 
+  align-self: center;
+  font-size: large;
+}
+
+.translations li {
+  cursor: pointer;
+  position: relative;
+  left: 2em;
+  margin: .25em;
+  padding: 0.3em 0.3em 0.3em 0;
+  height: 1.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom:solid #DDD;
+  border-bottom-width:0.2px;
+}
+
+.translations li:hover {
+  background-color: #DDD;
+}
+.translations .text {
+  position: relative;
+  top: 3px;
+  left: 45%;
+}
+
+.selected {
+  background-color: #DDD;
+ }
+ 
+ .selected .text {
+  background-color: #DDD;
+  left: 45%;
+  font-weight: bold;
+ }*/

@@ -1,0 +1,7 @@
+<ul class="translations">
+    <li *ngFor="let translation of translations"
+      [class.selected]="translation === selectedTranslation"
+      (click)="onSelect(translation)">
+      <span class="text">{{ translation.display }}</span>
+    </li>
+  </ul>

@@ -1,0 +1,18 @@
+<div class="search-box">
+    <form #translationForm='ngForm'>
+        <div class="form-group">
+            <label for="search">Search: </label>
+            <md-input type="text"
+                required
+                name="native"
+                #native='ngModel'
+                [(ngModel)]="translation.native"
+            ></md-input>
+            <button md-icon-button class="button" (click)="translationPush()">
+                <md-icon class="material-circle">add_circle_outline</md-icon>
+            </button>
+        </div>
+    </form>
+</div>
+
+
