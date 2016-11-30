@@ -12,13 +12,20 @@ import { TranslationService } from '../translations/translation.service';
 export class DashboardComponent implements OnInit {
 
     translations: Translation[];
+  errorMessage: string;
+  mode = "Observable";
 
-    constructor(private translationService: TranslationService) { }
+  constructor(private translationService: TranslationService) { }
 
-    ngOnInit(): void {
-        // this.translationService.getTranslations()
-        //     .subscribe(
-        //         translations => this.translations = translations
-        //     );
-    }
+  ngOnInit(): void {
+    this.getTranslations();
+  }
+
+  getTranslations() {
+    this.translationService.getTranslations()
+        .subscribe(
+          translations => this.translations = translations,
+          error => this.errorMessage = <any>error
+        );
+  }
 }

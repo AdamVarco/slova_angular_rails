@@ -28,7 +28,7 @@ export class TranslationsComponent implements OnInit {
   getTranslations() {
     this.translationService.getTranslations()
         .subscribe(
-          translations => this.translations = translations,
+          translations => this.translations = this.filteredTranslations = translations,
           error => this.errorMessage = <any>error
         );
   }

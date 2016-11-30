@@ -3,7 +3,7 @@ class TranslationsController < ApplicationController
 
   # GET /translations
   def index
-    @translations = Translation.all
+    @translations = Translation.order('created_at DESC')
 
     render json: @translations
   end
