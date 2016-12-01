@@ -1,0 +1,3 @@
+class NewTranslation < ApplicationRecord
+    
+end

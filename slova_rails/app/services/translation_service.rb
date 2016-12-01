@@ -1,14 +1,9 @@
 class TranslationService
-  include Yandex::API
+  require 'yandex-api'
+  Yandex::API::Translate
 
-  def initialize
-    @languages = Translate.languages["langs"]
-    p @languages
-
-  end
-
-  def translate(native, target_lang)
-    Translate.do(native, target_lang)
+  def initialize(params)
+    return Yandex::API::Translate.do(params[:search], params[:target_lang])
   end
 
 end

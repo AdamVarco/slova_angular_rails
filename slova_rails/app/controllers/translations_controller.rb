@@ -13,14 +13,17 @@ class TranslationsController < ApplicationController
     render json: @translation
   end
 
-  # POST /translations
-  def create
-    @translation = Translation.new(translation_params)
+  # POST /new_translations
+  def create(search_params)
+    respond_to :json
+    
+    @new_translation = TranslationService.new(search_params)
+    return @new_translation
 
-    if @translation.save
-      render json: @translation, status: :created, location: @translation
+    if @new_translation.save
+      render json: @new_translation, status: :created, location: @new_translation
     else
-      render json: @translation.errors, status: :unprocessable_entity
+      render json: @new_translation.errors, status: :unprocessable_entity
     end
   end
 
@@ -45,7 +48,7 @@ class TranslationsController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def translation_params
-      params.require(:translation).permit(:id, :native, :target, :created_at, :display, :times_correct, :times_incorrect)
+    def search_params
+      params.permit(:search, :target_lang, :format, :translation)
     end
 end
