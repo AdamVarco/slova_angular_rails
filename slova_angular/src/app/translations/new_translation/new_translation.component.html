@@ -1,18 +1,31 @@
 <div class="search-box">
-    <form #translationForm='ngForm'>
+    <form #searchForm='ngForm' (ngSubmit)="translationSearch(searchForm.value)"  novalidate>
         <div class="form-group">
-            <label for="search">Search: </label>
+            <label for="searchInput"></label>
             <md-input type="text"
-                required
-                name="native"
-                #native='ngModel'
-                [(ngModel)]="translation.native"
+                placeholder="Search"
+                name="search"
+                #search='ngModel'
+                [(ngModel)]="search.search"
             ></md-input>
-            <button md-icon-button class="button" (click)="translationPush()">
-                <md-icon class="material-circle">add_circle_outline</md-icon>
-            </button>
         </div>
+        <div class="form-group">
+            <label for="langInput"></label>
+            <md-input type="text"
+                placeholder="Lanuage (e.g. 'en')"
+                name="target_lang"
+                #target_lang='ngModel'
+                [(ngModel)]="search.target_lang"
+            ></md-input>
+        </div>
+        <button md-icon-button type="submit" class="button">
+            <md-icon class="material-icons">youtube_searched_for</md-icon>
+        </button>
     </form>
+
+    <div>
+        {{ search.value }}
+    </div>
 </div>
 
 

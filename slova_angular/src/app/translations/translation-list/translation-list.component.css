@@ -23,20 +23,37 @@
 }
 
 .translations li:hover {
-  background-color: #DDD;
+  background-color: #F2F2F2;
 }
 .translations .text {
   position: relative;
   top: 3px;
-  left: 45%;
+  left: 10%;
 }
 
 .selected {
-  background-color: #DDD;
+  background-color: #F2F2F2;
  }
  
  .selected .text {
-  background-color: #DDD;
-  left: 45%;
+  background-color: #F2F2F2;
+  left: 10%;
   font-weight: bold;
+ }
+
+ .button-box {
+   position: absolute;
+   right:10%;
+ }
+
+ .button1 {
+   position: relative;
+   top: -25px;
+   font-size: 80%;
+ }
+
+ .button2 {
+   position: relative;
+   top: -25px;
+   font-size: 80%;
  }

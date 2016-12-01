@@ -27,10 +27,8 @@ import { TranslationListComponent } from './translations/translation-list/transl
 
 // Services and configuration
 import { TranslationService } from './translations/translation.service';
-import { NewTranslationService } from './translations/new_translation/new_translation.service'
+import { NewTranslationService } from './translations/new_translation/new_translation.service';
 import { TestService } from './tests/test.service';
-import { firebaseConfig } from './../environments/firebase.config';
-
 
 
 @NgModule({

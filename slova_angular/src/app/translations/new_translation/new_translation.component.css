@@ -2,11 +2,11 @@
     text-align: center;
 }
 
-.button {
-    left: 5%;
+.search-button {
+    font-size: 36px; 
 }
 
-.material-circle {
+.material-icons {
     color: rgba(3, 169, 244, 1);
     left: 20%;
 }
