@@ -4,7 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
-import { AngularFireModule } from 'angularfire2/index';
+import { Auth } from  './auth/auth.service';
+import { AUTH_PROVIDERS } from 'angular2-jwt';
+import { AuthGuard } from './auth/auth.guard';
 
 // adds functionality to Observable query objects
 import 'rxjs/add/operator/map';
@@ -14,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Smart components
 import { AppComponent } from './app.component';
+import { LandingComponent } from './landing/landing.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TranslationsComponent } from './translations/translations.component';
@@ -21,6 +24,7 @@ import { NewTranslationComponent } from './translations/new_translation/new_tran
 import { TestsComponent } from './tests/tests.component';
 import { TestComponent } from './tests/test/test.component';
 import { QuestionsComponent } from './tests/questions/questions.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // Presentation components
 import { TranslationListComponent } from './translations/translation-list/translation-list.component';
@@ -39,8 +43,10 @@ import { TestService } from './tests/test.service';
     AppRoutingModule,
     MaterialModule.forRoot()
   ],
+  exports: [ MaterialModule ],
   declarations: [
     AppComponent,
+    LandingComponent,
     NavigationComponent,
     DashboardComponent,
     TranslationsComponent,
@@ -48,12 +54,16 @@ import { TestService } from './tests/test.service';
     TranslationListComponent,
     TestsComponent,
     TestComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    ProfileComponent
   ],
   providers: [
     TranslationService,
     NewTranslationService,
-    TestService
+    TestService,
+    Auth,
+    AUTH_PROVIDERS,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

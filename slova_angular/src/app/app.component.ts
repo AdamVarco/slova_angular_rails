@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
 
-import { initializeApp, database } from 'firebase';
+import { Auth } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [Auth]
 })
 
 export class AppComponent {
+  
+  title = "Slova";
 
+  constructor(private auth: Auth) {
+    
+  }
+
+  openUserSettings() {
+    return this;
+  }
  }

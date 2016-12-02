@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { tokenNotExpired } from 'angular2-jwt';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
@@ -8,18 +9,21 @@ import {Observable} from 'rxjs/Observable';
   templateUrl: 'navigation.component.html',
   encapsulation: ViewEncapsulation.None,
 })
+
 export class NavigationComponent {
   tabLinks = [
     {label: 'Dashboard', link: 'dashboard'},
     {label: 'Translations', link: 'translations'},
     {label: 'Tests', link: 'tests'},
-    {label: 'Add Word', link: 'new_translation'}
+    {label: 'Add Word', link: 'new_translation'},
+    {label: 'Profile', link: 'profile'}
   ];
   activeLinkIndex = 0;
 
   tabs = [
     {
-      label: 'Dashboard'},
+      label: 'Dashboard',
+      disabled: true},
     {
       label: 'Translations',
       disabled: true},
@@ -28,7 +32,10 @@ export class NavigationComponent {
       disabled: true},
     {
       label: 'Add Word',
-      disabled: true}
+      disabled: true},
+    {
+      label: 'Profile',
+      diabled: true}
   ];
 
   asyncTabs: Observable<any>;

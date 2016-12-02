@@ -1,19 +1,51 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
 
+import { LandingComponent } from './landing/landing.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TranslationsComponent } from './translations/translations.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
 import { TestsComponent } from './tests/tests.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
-    { path: 'dashboard', component: DashboardComponent },
-    { path: 'translations', component: TranslationsComponent },
-    { path: 'new_translation', component: NewTranslationComponent },
-    { path: 'tests', component: TestsComponent },
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-    { path: '**', redirectTo: 'dashboard'}
+    { 
+        path: 'landing', 
+        component: LandingComponent },
+    { 
+        path: 'dashboard', 
+        component: DashboardComponent,
+        canActivate: [AuthGuard]    
+     },
+    { 
+        path: 'translations', 
+        component: TranslationsComponent,
+        canActivate: [AuthGuard] 
+     },
+    { 
+        path: 'new_translation', 
+        component: NewTranslationComponent,
+        canActivate: [AuthGuard]     
+     },
+    { 
+        path: 'tests', 
+        component: TestsComponent,
+        canActivate: [AuthGuard]     
+     },
+    { 
+        path: 'profile', 
+        component: ProfileComponent,
+        canActivate: [AuthGuard] 
+     },
+    { 
+        path: '', redirectTo: 'landing', 
+        pathMatch: 'full' },
+    { 
+        path: '**', 
+        redirectTo: 'landing'}
 ];
+
 
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
