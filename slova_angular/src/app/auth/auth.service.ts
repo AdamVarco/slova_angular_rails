@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { tokenNotExpired } from 'angular2-jwt';
 import { myConfig } from './auth.config';
+import { TranslationService } from '../translations/translation.service';
 
 let Auth0Lock = require('auth0-lock').default;
 
@@ -16,7 +17,7 @@ export class Auth {
   //Store profile object in auth class
   userProfile: Object;
 
-  constructor() {
+  constructor(private translationService: TranslationService) {
     // Set userProfile attribute of already saved profile
     this.userProfile = JSON.parse(localStorage.getItem('profile'));
 
@@ -24,6 +25,7 @@ export class Auth {
     this.lock.on("authenticated", (authResult) => {
       localStorage.setItem('id_token', authResult.idToken);
 
+      this.translationService.getTranslations().subscribe;
       // Fetch profile information
       this.lock.getProfile(authResult.idToken, (error, profile) => {
         if (error) {

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ModuleWithProviders }         from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 
@@ -46,6 +47,11 @@ const appRoutes: Routes = [
         redirectTo: 'landing'}
 ];
 
+export const appRoutingProviders: any[] = [
+  AuthGuard
+];
+
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],

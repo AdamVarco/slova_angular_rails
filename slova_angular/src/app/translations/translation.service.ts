@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { AuthHttp } from 'angular2-jwt';
 import { Observable } from 'rxjs/Rx';
 
 import { Translation } from './translation.model';
@@ -10,11 +11,11 @@ export class TranslationService {
     private translationsUrl = 'http://localhost:3001/translations.json';
 
     constructor(
-        private http: Http
+        private authHttp: AuthHttp
     ) {}
 
     getTranslations(): Observable<Translation[]> {
-        return this.http.get(this.translationsUrl)
+        return this.authHttp.get(this.translationsUrl)
                         .map((response: Response) => <Translation[]>response.json())
                         .catch(this.handleError);
     }

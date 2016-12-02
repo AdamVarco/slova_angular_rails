@@ -10,15 +10,9 @@ import { TestService } from './test.service';
 })
 export class TestsComponent implements OnInit {
 
-  newTest: Test = new Test(
-    1, 'recently_added'
-  )      
+  constructor() { }
 
-  constructor(private testService: TestService) { }
-
-  ngOnInit(): void {
-    this.testService.generateTest()
-        
-  }
+  ngOnInit() {}
+    
 
 }

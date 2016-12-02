@@ -37,11 +37,11 @@ import { TestService } from './tests/test.service';
 
 @NgModule({
   imports: [
+    MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    MaterialModule.forRoot()
+    AppRoutingModule
   ],
   exports: [ MaterialModule ],
   declarations: [

@@ -1,5 +1,6 @@
 class TranslationsController < ApplicationController
   before_action :set_translation, only: [:show, :update, :destroy]
+  before_action :authenticate_user
 
   # GET /translations
   def index
@@ -16,7 +17,7 @@ class TranslationsController < ApplicationController
   # POST /new_translations
   def create(search_params)
     respond_to :json
-    
+
     @new_translation = TranslationService.new(search_params)
     return @new_translation
 

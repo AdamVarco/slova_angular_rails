@@ -5,9 +5,8 @@ import {Auth} from './auth.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate{
-    constructor(private auth: Auth, private router: Router){
-        
-    }
+
+    constructor(private auth: Auth, private router: Router) { }
     
     canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
         if(this.auth.authenticated()){
@@ -15,6 +14,8 @@ export class AuthGuard implements CanActivate{
             return true;
         } else {
             console.log('BLOCKED BY AUTH GUARD');
+            localStorage.setItem('redirect_url', state.url);
+            this.auth.login();
             this.router.navigate(['/']);
             return false;
         }
