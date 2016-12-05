@@ -8,14 +8,14 @@ import { Translation } from './translation.model';
 @Injectable()
 export class TranslationService {
 
-    private translationsUrl = 'http://localhost:3001/translations.json';
+    private translationsUrl = 'http://localhost:3000/translations.json';
 
     constructor(
-        private authHttp: AuthHttp
+        private http: Http, private authHttp: AuthHttp
     ) {}
 
     getTranslations(): Observable<Translation[]> {
-        return this.authHttp.get(this.translationsUrl)
+        return this.http.get(this.translationsUrl)
                         .map((response: Response) => <Translation[]>response.json())
                         .catch(this.handleError);
     }

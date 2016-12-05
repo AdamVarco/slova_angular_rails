@@ -1,6 +1,6 @@
 class TranslationsController < ApplicationController
   before_action :set_translation, only: [:show, :update, :destroy]
-  before_action :authenticate_user
+  # before_action :authenticate_user
 
   # GET /translations
   def index

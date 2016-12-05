@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: slova_servicer_development
+  database: slova_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: slova_servicer_test
+  database: slova_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: slova_servicer_production
-  username: slova_servicer
-  password: <%= ENV['SLOVA_SERVICER_DATABASE_PASSWORD'] %>
+  database: slova_production
+  username: slova
+  password: <%= ENV['SLOVA_DATABASE_PASSWORD'] %>

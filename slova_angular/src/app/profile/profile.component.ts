@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Auth } from '../auth/auth.service';
 
 @Component({
@@ -6,11 +6,13 @@ import { Auth } from '../auth/auth.service';
     selector: 'profile',
     templateUrl: 'profile.component.html'
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
     profile:any;
 
-    constructor(private auth:Auth){
-        this.profile = localStorage.getItem('profile');
-        console.log(this.profile);
+    constructor(private auth:Auth) {}
+
+    ngOnInit(): void {
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+            console.log(this.profile);
     }
 }

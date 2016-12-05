@@ -9,23 +9,6 @@ import { TranslationService } from './translations/translation.service';
 import { Auth } from './auth/auth.service';
 
 
-export class MockTranslationService {
-  constructor() { }
- 
-  getList(): Observable<any[]> {
-    return Observable.of([]);
-  }
-}
- 
-export class MockAuth {
-  login() {}
-  logout() {}
-  authenticated() {}
-}
- 
-let mockTranslationService = new MockTranslationService();
-let mockAuth = new MockAuth();
-
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -35,10 +18,7 @@ describe('AppComponent', () => {
     })
     .overrideComponent(AppComponent, {
       set: {
-        providers: [
-          { provide: TranslationService, useValue: mockTranslationService },
-          { provide: Auth, useValue: mockAuth }
-        ]
+        providers: []
       }
     })
     .compileComponents();
