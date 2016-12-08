@@ -12,10 +12,6 @@ random_russian_words = ["красный", "зеленый", "синий", "же�
 50.times do |i|
   Translation.create!(
     native: RandomWord.adjs.next,
-    target: random_russian_words.sample,
-    created_at: Time.now,
-    display: '',
-    times_correct: 0,
-    times_incorrect: 0
+    target: random_russian_words.sample
   )
 end

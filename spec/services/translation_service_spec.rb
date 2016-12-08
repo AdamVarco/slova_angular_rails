@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TranslationService do
   let(:new_translation_service) {TranslationService.new({})}
-  let(:valid_translation) {TranslationService.new({search: "Apple", target_lang: "ru"})}
+  let(:valid_translation) {TranslationService.new({search: "apple", target_lang: "ru"})}
 
   it "exists" do
     expect(new_translation_service).to be_truthy
@@ -24,7 +24,7 @@ RSpec.describe TranslationService do
   describe "translating with @options" do
     it "assigns the proper attributes to the new translation service object" do
 
-      expect(valid_translation.options).to eq({search: "Apple", target_lang: "ru"})
+      expect(valid_translation.options).to eq({search: "apple", target_lang: "ru"})
     end
 
     it "has a method sending search and target_lang option params to external translation service" do
@@ -34,17 +34,17 @@ RSpec.describe TranslationService do
 
     it "receives the valid translation from external translation service" do
 
-      expect(valid_translation.search).to eq("Яблоко")
+      expect(valid_translation.search).to eq("яблоко")
     end
   end
 
   describe "translating edge-case searches" do
-    let(:hello_translation) {TranslationService.new({search: "Dog", target_lang: "ru"})}
+    let(:hello_translation) {TranslationService.new({search: "hello world!", target_lang: "ru"})}
     let(:empty_translation) {TranslationService.new({search: "", target_lang: "ru"})}
 
     it "translates more than one word" do
 
-        expect(hello_translation.search).to eq("Собака")
+        expect(hello_translation.search).to eq("Всем привет!")
     end
 
     it "returns nothing for empty searches" do

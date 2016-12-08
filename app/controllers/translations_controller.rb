@@ -11,18 +11,18 @@ class TranslationsController < ApplicationController
 
   # GET /translations/1
   def show
-    render json: @translation
+    render @translation
   end
 
   # POST /translations
   def create
     # respond_to :json
 
-    @new_translation = TranslationService.new({search: params[:search], target_lang: params[:target_lang]})
+    pending = TranslationService.new({search: params[:search], target_lang: params[:target_lang]})
 
-    @pending = @new_translation.search
+    @translation = pending.search
 
-    render json: @pending
+    render json: @translation
 
     # if @new_translation.save
     #   render json: @new_translation, status: :created, location: @new_translation

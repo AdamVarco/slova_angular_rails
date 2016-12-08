@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe TranslationsController, type: :controller do
-  let(:translation ) { Translation.new({native: "apple", target: "яблоко", display: "apple" }) }
+  before do
+    @translation = FactoryGirl.create(:translation)
+  end
 
   describe "translation instantiation" do
     it "creates new translation" do
 
-        expect(translation).to be_truthy
+        expect(@translation).to be_truthy
     end
   end
 
@@ -27,13 +29,13 @@ RSpec.describe TranslationsController, type: :controller do
 
   describe "GET show" do
       it "returns http success" do
-        get :show, id: translation.id
+        get :show, params: { id: @translation.id}
         expect(response).to have_http_status(:success)
       end
 
       it "assigns translation to @translation" do
-        get :show, id: translation.id
-        expect(assigns(:translation)).to eq(translation)
+        get :show, params: { id: @translation.id }
+        expect(assigns(:translation)).to eq(@translation)
       end
     end
 end

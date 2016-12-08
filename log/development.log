@@ -6343,3 +6343,876 @@ Processing by TranslationsController#create as */*
 Completed 200 OK in 1230ms (Views: 2.2ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/translations/50" for ::1 at 2016-12-06 16:47:57 -0500
+  
+LoadError (cannot load such file -- /Users/grantgarland/Projects/Capstone/slova_angular_rails/slova_rails/config/routes.rb):
+  
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `load'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `block in load'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.0.1) lib/active_support/dependencies.rb:287:in `load'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `each'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:16:in `reload!'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+activesupport (5.0.0.1) lib/active_support/file_update_checker.rb:77:in `call'
+activesupport (5.0.0.1) lib/active_support/file_update_checker.rb:77:in `execute'
+railties (5.0.0.1) lib/rails/application/routes_reloader.rb:7:in `execute'
+railties (5.0.0.1) lib/rails/application/finisher.rb:132:in `block (2 levels) in <module:Finisher>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:396:in `instance_exec'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:396:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:547:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:547:in `block (2 levels) in default_terminator'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:546:in `catch'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:546:in `block in default_terminator'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_run_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:99:in `run!'
+activesupport (5.0.0.1) lib/active_support/reloader.rb:113:in `run!'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:61:in `block in run!'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:58:in `tap'
+activesupport (5.0.0.1) lib/active_support/execution_wrapper.rb:58:in `run!'
+activesupport (5.0.0.1) lib/active_support/reloader.rb:59:in `run!'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:10:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+rack-cors (0.4.0) lib/rack/cors.rb:80:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+Started GET "/translations/50" for ::1 at 2016-12-06 16:49:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TranslationsController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mTranslation Load (2.1ms)[0m  [1m[34mSELECT  "translations".* FROM "translations" WHERE "translations"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Translation (1.11ms)
+Completed 200 OK in 25ms (Views: 6.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/translations" for ::1 at 2016-12-06 16:49:32 -0500
+Processing by TranslationsController#index as HTML
+  [1m[36mTranslation Load (0.8ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (9.45ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-06 16:49:59 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (14.15ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-06 16:50:00 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (1.2ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (14.55ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-06 16:50:08 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"run", "translation"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.07ms)
+Completed 200 OK in 4289ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-06 16:50:19 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 921ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-06 22:39:20 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 861ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 13:32:35 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (14.8ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (25.82ms)
+Completed 200 OK in 81ms (Views: 56.0ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 13:32:37 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (12.85ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 13:32:46 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (19.3ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 13:32:55 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (17.4ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 13:32:57 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (19.15ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 13:33:09 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"jowl", "target_lang"=>"ru", "translation"=>{}}
+Started POST "/translations" for ::1 at 2016-12-07 13:34:28 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"houses", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 6524ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 104754ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 13:36:37 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 1853ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 14:34:41 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 1069ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 15:58:13 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 833ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 15:59:07 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 677ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:18:32 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 828ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 16:22:38 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (17.35ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-07 16:24:12 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (1.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (10.6ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:24:31 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 742ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations?search=houses&target_lang=ru" for ::1 at 2016-12-07 16:25:15 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"houses", "target_lang"=>"ru"}
+Completed 200 OK in 999ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:28:10 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 204 No Content in 672ms (ActiveRecord: 3.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:28:19 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"houses", "target_lang"=>"ru", "translation"=>{}}
+Completed 204 No Content in 698ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:29:16 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"trees", "target_lang"=>"ru", "translation"=>{}}
+Completed 204 No Content in 719ms (ActiveRecord: 2.9ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:30:50 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"houses", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 752ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:33:26 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"green", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 742ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:34:20 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"yellow", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 769ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:37:10 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"sand", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 701ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:37:25 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"sand", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 715ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:38:13 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"jolly", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 801ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:39:18 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"ground", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 645ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:41:00 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 678ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:41:46 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 674ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:41:57 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"red", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 817ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:43:35 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"green", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 823ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:54:29 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"raise", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 941ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:54:39 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"rat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 673ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:55:27 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"rat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 805ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 16:55:47 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"rat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 821ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 17:02:29 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"rat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 871ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 17:02:36 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"freedom", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 742ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-07 17:04:03 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"frog", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 764ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 09:27:38 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"дом", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 1066ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 13:50:33 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"книга", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 952ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 13:50:36 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"книга", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 712ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 13:51:18 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"book", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 800ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.7ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "House"], ["target", "дома"], ["created_at", 2016-12-08 19:25:23 UTC], ["display", "дома"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:25:23 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/translations.json" for ::1 at 2016-12-08 14:26:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (1.0ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (10.36ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:26:23 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (12.98ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:26:40 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 724ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (5043.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "slova_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "parallel"], ["target", "зеленый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "зеленый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "calcic"], ["target", "небесно голубой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "небесно голубой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "awl"], ["target", "лиловый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "лиловый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "epizootic"], ["target", "синий"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "синий"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "vernacular"], ["target", "белый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "белый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "lilting"], ["target", "белый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "белый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "instantaneous"], ["target", "мятный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "мятный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "lossless"], ["target", "кремовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "кремовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "suety"], ["target", "лиловый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "лиловый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "cussed"], ["target", "золотой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "золотой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "unlatched"], ["target", "оранжевый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "оранжевый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "fledged"], ["target", "багровый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "багровый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "rickety"], ["target", "желтый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "желтый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "thankless"], ["target", "черный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "черный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "unplaced"], ["target", "кремовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "кремовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "disarrayed"], ["target", "розовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "розовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "photic"], ["target", "красный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "красный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "laureled"], ["target", "багровый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "багровый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "booted"], ["target", "серый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "lunisolar"], ["target", "небесно голубой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "небесно голубой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "jagged"], ["target", "черный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "черный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "appetitive"], ["target", "кремовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "кремовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "abatable"], ["target", "фиолетовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "фиолетовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "demotic"], ["target", "красный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "красный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "difficult"], ["target", "пурпурный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "пурпурный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "pediatric"], ["target", "зеленый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "зеленый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "worshipful"], ["target", "золотой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "золотой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "coital"], ["target", "серебряный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серебряный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "woody"], ["target", "мятный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "мятный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "agog"], ["target", "лазурный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "лазурный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "sinful"], ["target", "оранжевый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "оранжевый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "benthic"], ["target", "кремовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "кремовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "debasing"], ["target", "золотой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "золотой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "retracted"], ["target", "кремовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "кремовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "awnless"], ["target", "розовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "розовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "thirsty"], ["target", "фиолетовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "фиолетовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "unrealistic"], ["target", "орхидный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "орхидный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "evitable"], ["target", "розовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "розовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "jerry"], ["target", "багровый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "багровый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "briny"], ["target", "белый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "белый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "cartographical"], ["target", "голубой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "голубой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "pop"], ["target", "серый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "spaciotemporal"], ["target", "серебряный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серебряный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "timed"], ["target", "желтый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "желтый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "nubbly"], ["target", "бирюзовый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "бирюзовый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "retractile"], ["target", "оранжевый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "оранжевый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "grainy"], ["target", "серебряный"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серебряный"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "parlous"], ["target", "голубой"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "голубой"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "caucasian"], ["target", "серый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "серый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "translations" ("native", "target", "created_at", "display", "times_correct", "times_incorrect", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["native", "phyletic"], ["target", "багровый"], ["created_at", 2016-12-08 19:39:30 UTC], ["display", "багровый"], ["times_correct", 0], ["times_incorrect", 0], ["updated_at", 2016-12-08 19:39:30 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/translations.json" for ::1 at 2016-12-08 14:39:35 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.9ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (29.91ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:39:37 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.5ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (22.44ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:39:46 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (19.46ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:40:03 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.9ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (17.66ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:40:04 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (21.7ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:40:16 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (24.44ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:40:54 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.6ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (18.89ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:41:10 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (21.35ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 14:41:14 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (23.14ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:41:21 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"goat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 768ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:43:09 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"goat", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 817ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:46:08 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 779ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:46:29 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 692ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:47:38 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"houses", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 786ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:52:58 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 806ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:55:04 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"red", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 13878ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:55:54 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"red", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 795ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:56:04 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"red", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 727ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:56:24 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"blue", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 717ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 14:57:07 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"blue", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 737ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:00:09 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"blue", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 880ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:00:28 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"blue", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 684ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/translations.json" for ::1 at 2016-12-08 15:02:25 -0500
+Processing by TranslationsController#index as JSON
+  [1m[36mTranslation Load (0.7ms)[0m  [1m[34mSELECT "translations".* FROM "translations" ORDER BY created_at DESC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Translation::ActiveRecord_Relation (17.79ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:02:30 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 779ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:03:27 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 702ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:06:01 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 762ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:08:20 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 712ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:08:55 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 735ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:17:27 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"blue ", "target_lang"=>"ru", "translation"=>{}}
+Completed   in 66311ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:18:54 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"fox", "target_lang"=>"ru", "translation"=>{}}
+Started POST "/translations" for ::1 at 2016-12-08 15:19:59 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 75994ms (Views: 2.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:20:37 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ru", "translation"=>{}}
+Completed 200 OK in 76013ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:21:19 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ", "target_lang"=>"ru", "translation"=>{}}
+Started POST "/translations" for ::1 at 2016-12-08 15:21:26 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ", "target_lang"=>"ru", "translation"=>{}}
+Started POST "/translations" for ::1 at 2016-12-08 15:21:28 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ", "target_lang"=>"ru", "translation"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.11ms)
+Completed 200 OK in 76075ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 68168ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 76076ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 68056ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:26:25 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house ", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 715ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:29:22 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 697ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:30:05 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 819ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:30:24 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"house", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 713ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:30:36 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"fox", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 700ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:30:41 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"window", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 724ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:33:03 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"окна", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 1045ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:33:08 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"окнo", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 778ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTranslation Load (0.5ms)[0m  [1m[34mSELECT  "translations".* FROM "translations" ORDER BY "translations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/translations" for ::1 at 2016-12-08 15:34:42 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"santa", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 729ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:34:48 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"santa claus", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 779ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:34:57 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"pirate", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 741ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:35:02 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"pinecone", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 872ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:36:05 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"pinecone ridge", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 837ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:36:19 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"крепакура", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 799ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:36:47 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"сало", "target_lang"=>"en", "translation"=>{}}
+Completed 200 OK in 802ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:38:20 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"apple", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 780ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/translations" for ::1 at 2016-12-08 15:38:25 -0500
+Processing by TranslationsController#create as */*
+  Parameters: {"search"=>"Apple", "target_lang"=>"ru", "translation"=>{}}
+Completed 200 OK in 731ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+

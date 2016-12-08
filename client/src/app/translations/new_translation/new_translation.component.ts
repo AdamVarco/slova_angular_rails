@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
 import { Search } from './search.model';
-import { NewTranslationService } from './new_translation.service';
-import { NewTranslation } from './new_translation.model';
+import { NewTranslationService } from './new_translation.service';      
 
 @Component({
     moduleId: 'module.id',
@@ -14,23 +13,24 @@ import { NewTranslation } from './new_translation.model';
 })
 export class NewTranslationComponent {
 
-    search = new Search;
-    translation = new NewTranslation
+    public yandexTranslation: {};
 
     constructor(private newTranslationService: NewTranslationService) {
         
     }
 
-    translationSearch(search: any): void {
+    translationSearch(query: any) {
 
-        this.newTranslationService.getTranslation(search)
+        this.newTranslationService.getTranslation(query)
             .subscribe(
-                response => this.search = response.json(),
+                data => {
+                    this.yandexTranslation = data;
+                    console.log(this.yandexTranslation);
+                },
                 error => { console.log("Error getting translation");
-                return Observable.throw(error);
-                }
-        );
-        console.log(search);
+                    return Observable.throw(error);
+                },
+            );  
     }
-
+    
 }

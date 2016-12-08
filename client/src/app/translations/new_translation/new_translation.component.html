@@ -23,9 +23,8 @@
         </button>
     </form>
 
-    <div>
-        {{ search.value }}
-        {{ translation.translation}}
+    <div *ngIf="yandexTranslation">
+        {{ yandexTranslation._body }}
     </div>
 </div>
 
