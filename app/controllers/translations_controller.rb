@@ -1,5 +1,4 @@
 class TranslationsController < ApplicationController
-  before_action :set_translation, only: [:show, :update, :destroy]
   # before_action :authenticate_user
 
   # GET /translations
@@ -9,34 +8,35 @@ class TranslationsController < ApplicationController
     render json: @translations
   end
 
-  # GET /translations/1
-  def show
-    render @translation
+  # POST /search_translations
+  def search
+    already_in_db = Translation.find_by(native: params[:search])
+
+    if already_in_db
+      @warning = "You already saved this translation!"
+      render json: @warning
+    else
+        @user_search = TranslationService.new({search: params[:search], target_lang: params[:target_lang]})
+        @pending_translation = @user_search.search
+
+        render json: @pending_translation
+    end
   end
 
   # POST /translations
   def create
-    # respond_to :json
+    native_word = params[:native]
+    target_word = params[:target]
 
-    pending = TranslationService.new({search: params[:search], target_lang: params[:target_lang]})
+    @translation = Translation.new({native: native_word, target: target_word})
 
-    @translation = pending.search
-
-    render json: @translation
-
-    # if @new_translation.save
-    #   render json: @new_translation, status: :created, location: @new_translation
-    # else
-    #   render json: @new_translation.errors, status: :unprocessable_entity
-    # end
-  end
-
-  # PATCH/PUT /translations/1
-  def update
-    if @translation.update(translation_params)
+    if @translation.save
       render json: @translation
     else
-      render json: @translation.errors, status: :unprocessable_entity
+      render json: {
+        status: 500,
+        errors: list.errors
+      }
     end
   end
 
@@ -44,15 +44,4 @@ class TranslationsController < ApplicationController
   def destroy
     @translation.destroy
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_translation
-      @translation = Translation.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def search_params
-      params.permit(:search, :target_lang, :format)
-    end
 end

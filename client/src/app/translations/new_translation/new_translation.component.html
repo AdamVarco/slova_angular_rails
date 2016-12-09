@@ -22,9 +22,15 @@
             <md-icon class="material-icons">youtube_searched_for</md-icon>
         </button>
     </form>
-
+    <br>
     <div *ngIf="yandexTranslation">
+        <button md-icon-button (click)="saveTranslation()">
+            <md-icon class="material-icons">add_circle</md-icon>
+        </button>
         {{ yandexTranslation._body }}
+        <button md-icon-button (click)="cancelTranslation()">
+            <md-icon class="material-icons" color="warn">cancel</md-icon>
+        </button>
     </div>
 </div>
 

@@ -7216,3 +7216,5 @@ Processing by TranslationsController#create as */*
 Completed 200 OK in 731ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+DEPRECATION WARNING: Passing conditions to delete_all is deprecated and will be removed in Rails 5.1. To achieve the same use where(conditions).delete_all. (called from irb_binding at (irb):1)
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "translations" WHERE (id > 0)[0m

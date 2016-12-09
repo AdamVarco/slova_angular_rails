@@ -27,15 +27,7 @@ RSpec.describe TranslationsController, type: :controller do
     end
   end
 
-  describe "GET show" do
-      it "returns http success" do
-        get :show, params: { id: @translation.id}
-        expect(response).to have_http_status(:success)
-      end
-
-      it "assigns translation to @translation" do
-        get :show, params: { id: @translation.id }
-        expect(assigns(:translation)).to eq(@translation)
-      end
-    end
+  describe "POST search" do
+      
+  end
 end

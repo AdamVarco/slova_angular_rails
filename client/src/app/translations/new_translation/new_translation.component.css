@@ -11,3 +11,7 @@
     left: 20%;
 }
 
+.button md-raised-button{
+    padding: 2px, 2px, 2px, 2px;
+}
+

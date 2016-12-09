@@ -17,16 +17,19 @@ export class TranslationListComponent implements OnInit {
   ngOnInit() {
   }
 
-  resetTranslations(): void {
+  resetTranslations() {
     this.translations.forEach((t) => {
       t.display = t.target;
     })
   }
 
   onSelect(translation: Translation) {
+    if (this.selectedTranslation) {
+      this.selectedTranslation.display = this.selectedTranslation.target
+    }
+
       this.selectedTranslation = translation;
-      
-      this.resetTranslations();
+
       translation.display = translation.native;
   }
 

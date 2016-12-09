@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
-import { Search } from './search.model';
+import { Translation } from '../translation.model';
 import { NewTranslationService } from './new_translation.service';      
 
 @Component({
@@ -14,6 +14,7 @@ import { NewTranslationService } from './new_translation.service';
 export class NewTranslationComponent {
 
     public yandexTranslation: {};
+    public newTranslation: Translation;
 
     constructor(private newTranslationService: NewTranslationService) {
         
@@ -25,12 +26,27 @@ export class NewTranslationComponent {
             .subscribe(
                 data => {
                     this.yandexTranslation = data;
-                    console.log(this.yandexTranslation);
                 },
                 error => { console.log("Error getting translation");
                     return Observable.throw(error);
                 },
+                // () => this.yandexTranslation
             );  
     }
     
+    saveTranslation(): void {
+        this.newTranslationService.saveTranslation(this.yandexTranslation)
+            .subscribe(
+                success => {
+                    console.log("Translation saved successfully");
+                },
+                error => { 
+                    console.log("Error saving translation");
+                },
+            );
+    }
+
+    cancelTranslation(): void {
+        this.yandexTranslation = undefined;
+    }
 }

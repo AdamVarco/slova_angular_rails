@@ -7,13 +7,12 @@ class TranslationService
 
   def initialize(params)
     @options = params
-  rescue
-    # {error: "Translation request failed"}
+  rescue => e
+    puts e
   end
 
   def search
     t = Translator.translate(options[:search], options[:target_lang])
-    p t
   rescue => e
     puts e
   end
