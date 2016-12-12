@@ -5,7 +5,7 @@
       <span class="text">{{ translation.display }}</span>
       <div class="button-box">
         <button md-button class="button1" color="primary">Add</button>
-        <button md-button class="button2" color="warn">Delete</button>
+        <button md-button class="button2" color="warn" (click)="deleteTranslation(translation)">Delete</button>
       </div>
     </li>
   </ul>

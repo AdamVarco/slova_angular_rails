@@ -8,7 +8,7 @@ import { Translation } from './translation.model';
 @Injectable()
 export class TranslationService {
 
-    private translationsUrl = 'http://localhost:3000/translations.json';
+    private translationsUrl = 'http://localhost:3000/translations/';
 
     constructor(
         private http: Http, private authHttp: AuthHttp
@@ -20,12 +20,17 @@ export class TranslationService {
                         .catch(this.handleError);
     }
 
+    deleteTranslation(translation: Translation) {
+      return this.http.delete(this.translationsUrl + translation.id)
+                  .catch(this.handleError);
+    }
+
     private handleError (error: Response | any) {
    
     let errMsg: string;
     if (error instanceof Response) {
-      const body = error.json() || '';
-      const err = body.error || JSON.stringify(body);
+      const body = error || '';
+      const err = JSON.stringify(body);
       errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
     } else {
       errMsg = error.message ? error.message : error.toString();

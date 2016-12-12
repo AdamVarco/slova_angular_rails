@@ -1,14 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe TranslationsController, type: :controller do
-  before do
-    @translation = FactoryGirl.create(:translation)
-  end
+  let(:translation) { create(:translation) }
 
   describe "translation instantiation" do
     it "creates new translation" do
 
-        expect(@translation).to be_truthy
+        expect(translation).to be_truthy
     end
   end
 
@@ -28,6 +26,15 @@ RSpec.describe TranslationsController, type: :controller do
   end
 
   describe "POST search" do
-      
+    # TODO Add these specs
+  end
+
+  describe "DELETE destroy" do
+    it "successfully deletes translations" do
+      delete :destroy, params: { id: translation.id }
+      count = Translation.where({id: translation.id}).size
+
+      expect(count).to eq 0
+    end
   end
 end

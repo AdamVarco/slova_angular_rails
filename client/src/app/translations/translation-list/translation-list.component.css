@@ -20,6 +20,7 @@
   white-space: nowrap;
   border-bottom:solid #DDD;
   border-bottom-width:0.2px;
+  z-index: 1;
 }
 
 .translations li:hover {
@@ -43,7 +44,9 @@
 
  .button-box {
    position: absolute;
-   right:10%;
+   height: 1.5em;
+   right: 10%;
+   z-index: 2;
  }
 
  .button1 {

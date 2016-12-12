@@ -1,21 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ChangeDetectorRef } from '@angular/core';
+
 import { Translation } from '../translation.model';
+import { TranslationService } from '../translation.service';
 
 @Component({
   selector: 'translation-list',
   templateUrl: './translation-list.component.html',
-  styleUrls: ['./translation-list.component.css']
+  styleUrls: ['./translation-list.component.css'],
+  providers: [ TranslationService ]
 })
-export class TranslationListComponent implements OnInit {
+export class TranslationListComponent {
+   
+  constructor(private translationService: TranslationService, private ref: ChangeDetectorRef ) { }
 
   @Input()
   translations: Translation[];
   selectedTranslation: Translation;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   resetTranslations() {
     this.translations.forEach((t) => {
@@ -31,6 +31,20 @@ export class TranslationListComponent implements OnInit {
       this.selectedTranslation = translation;
 
       translation.display = translation.native;
+  }
+
+  deleteTranslation(translation: Translation) {
+    this.translationService.deleteTranslation(translation)
+        .subscribe(
+          success => {
+            console.log("Translation " + translation.id + " was deleted");
+            this.translations.splice(this.translations.indexOf(translation), 1);
+            this.ref.detectChanges;
+          },
+          error => {
+            console.log("Error deleting translation");
+          },
+        );
   }
 
 }

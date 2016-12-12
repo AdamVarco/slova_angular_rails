@@ -42,6 +42,10 @@ class TranslationsController < ApplicationController
 
   # DELETE /translations/1
   def destroy
-    @translation.destroy
+    @translation = Translation.find(params[:id])
+
+    unless @translation.destroy
+      flash.now[:alert] = "Could not delete translation at this time."
+    end
   end
 end
