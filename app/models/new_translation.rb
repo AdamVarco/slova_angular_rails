@@ -1,3 +1,0 @@
-class NewTranslation < ApplicationRecord
-    
-end

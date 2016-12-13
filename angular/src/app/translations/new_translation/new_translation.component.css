@@ -1,0 +1,17 @@
+.search-box {
+    text-align: center;
+}
+
+.search-button {
+    font-size: 36px; 
+}
+
+.material-icons {
+    color: rgba(3, 169, 244, 1);
+    
+}
+
+.button md-icon-button {
+    padding: 2px, 2px, 2px, 2px;
+}
+
