@@ -4,9 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
-import { Auth } from  './auth/auth.service';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
-import { AuthGuard } from './auth/auth.guard';
 
 // adds functionality to Observable query objects
 import 'rxjs/add/operator/map';
@@ -61,9 +59,7 @@ import { TestService } from './tests/test.service';
     TranslationService,
     NewTranslationService,
     TestService,
-    Auth,
     AUTH_PROVIDERS,
-    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

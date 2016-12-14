@@ -1,7 +1,5 @@
-import { NgModule } from '@angular/core';
-import { ModuleWithProviders }         from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth/auth.guard';
 
 import { LandingComponent } from './landing/landing.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -16,28 +14,23 @@ const appRoutes: Routes = [
         component: LandingComponent },
     { 
         path: 'dashboard', 
-        component: DashboardComponent,
-        canActivate: [AuthGuard]    
+        component: DashboardComponent 
      },
     { 
         path: 'translations', 
-        component: TranslationsComponent,
-        canActivate: [AuthGuard] 
+        component: TranslationsComponent
      },
     { 
         path: 'new_translation', 
-        component: NewTranslationComponent,
-        canActivate: [AuthGuard]     
+        component: NewTranslationComponent    
      },
     { 
         path: 'tests', 
-        component: TestsComponent,
-        canActivate: [AuthGuard]     
+        component: TestsComponent   
      },
     { 
         path: 'profile', 
-        component: ProfileComponent,
-        canActivate: [AuthGuard] 
+        component: ProfileComponent
      },
     { 
         path: '', redirectTo: 'landing', 
@@ -47,9 +40,6 @@ const appRoutes: Routes = [
         redirectTo: 'landing'}
 ];
 
-export const appRoutingProviders: any[] = [
-  AuthGuard
-];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
 

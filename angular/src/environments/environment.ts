@@ -5,8 +5,4 @@
 
 export const environment = {
   production: false,
-  auth0: {
-    clientID: 'jg9dcfdwhGrQvi14sHCZiQaGRgfi03PK',
-    domain: 'slova-developer.auth0.com'
-  }
 };
