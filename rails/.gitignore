@@ -16,8 +16,11 @@ config/database.yml
 !/log/.keep
 !/tmp/.keep
 log/development.log
-tmp/pids/server.pid
+tmp/*
 
 # Ignore Byebug command history file.
 .byebug_history
 log
+
+# Ignore application configuration
+/config/application.yml
