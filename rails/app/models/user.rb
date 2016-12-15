@@ -1,4 +1,8 @@
 class User < ApplicationRecord
-  validates :email,
-            presence: true
+  include DeviseTokenAuth::Concerns::User
+  
+  devise :database_authenticatable, :recoverable,
+         :trackable, :validatable, :registerable
+
+  validates :email, presence: true
 end

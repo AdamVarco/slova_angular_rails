@@ -5,24 +5,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
+import { Angular2TokenService, A2tUiModule } from 'angular2-token';
 
 // adds functionality to Observable query objects
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 
 import { AppRoutingModule } from './app-routing.module';
+import { LandingModule } from './landing/landing.module';
 
 // Smart components
 import { AppComponent } from './app.component';
-import { LandingComponent } from './landing/landing.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { TranslationsComponent } from './translations/translations.component';
+import { NavigationComponent } from './navigation/navigation.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
-import { TestsComponent } from './tests/tests.component';
-import { TestComponent } from './tests/test/test.component';
-import { QuestionsComponent } from './tests/questions/questions.component';
 import { ProfileComponent } from './profile/profile.component';
+import { QuestionsComponent } from './tests/questions/questions.component';
+import { TestComponent } from './tests/test/test.component';
+import { TestsComponent } from './tests/tests.component';
+import { TranslationsComponent } from './translations/translations.component';
 
 // Presentation components
 import { TranslationListComponent } from './translations/translation-list/translation-list.component';
@@ -33,18 +34,20 @@ import { NewTranslationService } from './translations/new_translation/new_transl
 import { TestService } from './tests/test.service';
 
 
+
 @NgModule({
   imports: [
     MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LandingModule,
+    A2tUiModule
   ],
   exports: [ MaterialModule ],
   declarations: [
     AppComponent,
-    LandingComponent,
     NavigationComponent,
     DashboardComponent,
     TranslationsComponent,
@@ -53,13 +56,14 @@ import { TestService } from './tests/test.service';
     TestsComponent,
     TestComponent,
     QuestionsComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   providers: [
     TranslationService,
     NewTranslationService,
     TestService,
     AUTH_PROVIDERS,
+    Angular2TokenService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
 import {Component } from '@angular/core';
-import {Router} from '@angular/router';
 
+import { Angular2TokenService } from 'angular2-token';
 
 @Component({
   moduleId: 'module.id',
@@ -9,4 +9,9 @@ import {Router} from '@angular/router';
 })
 export class LandingComponent { 
   
+   private _showImprint: boolean = false;
+
+    constructor(private _tokenService: Angular2TokenService) {
+        this._tokenService.init();
+    }
 }

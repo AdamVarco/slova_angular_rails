@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Angular2TokenService } from 'angular2-token';
 
 import { LandingComponent } from './landing/landing.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -14,7 +15,8 @@ const appRoutes: Routes = [
         component: LandingComponent },
     { 
         path: 'dashboard', 
-        component: DashboardComponent 
+        component: DashboardComponent
+        ,canActivate: [ Angular2TokenService ] 
      },
     { 
         path: 'translations', 
@@ -41,7 +43,7 @@ const appRoutes: Routes = [
 ];
 
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: true });
 
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
