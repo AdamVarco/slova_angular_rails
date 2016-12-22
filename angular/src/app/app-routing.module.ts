@@ -16,7 +16,6 @@ const appRoutes: Routes = [
     { 
         path: 'dashboard', 
         component: DashboardComponent
-        ,canActivate: [ Angular2TokenService ] 
      },
     { 
         path: 'translations', 

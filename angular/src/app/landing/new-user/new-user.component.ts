@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { Angular2TokenService, A2tUiModule, RegisterData } from 'angular2-token';
@@ -13,7 +14,18 @@ export class NewUserComponent {
   private _registerData: RegisterData = <RegisterData>{};
   private _output: any;
 
-  constructor(private _tokenService: Angular2TokenService) { }
+  constructor(private _tokenService: Angular2TokenService) {
+      this._tokenService.init({
+          registerAccountPath: 'https://localhost:3000/auth',
+          
+          globalOptions: {
+            headers: {
+                'Content-Type':     'application/json',
+                'Accept':           'application/json'
+            }
+        }
+      });
+   }
 
   onSubmit() {
 

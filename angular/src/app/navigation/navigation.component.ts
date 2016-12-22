@@ -1,6 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
-import { tokenNotExpired } from 'angular2-jwt';
 import {Observable} from 'rxjs/Observable';
 
 @Component({
