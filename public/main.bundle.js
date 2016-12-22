@@ -21579,7 +21579,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TranslationService = (function () {
     function TranslationService(http) {
         this.http = http;
-        this.translationsUrl = 'http://localhost:3000/translations/';
+        this.translationsUrl = '/translations';
     }
     TranslationService.prototype.getTranslations = function () {
         return this.http.get(this.translationsUrl)
@@ -54120,29 +54120,7 @@ webpackEmptyContext.id = 508;
 
 
 /***/ },
-/* 509 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(681);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(635);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(680);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(672);
-
-
-
-
-
-// import './styles.css';
-if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
-}
-__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
-
-
-/***/ },
+/* 509 */,
 /* 510 */,
 /* 511 */,
 /* 512 */,
@@ -78232,7 +78210,7 @@ module.exports = ".a2t-wrapper {\n    width: 100%;\n    height: 100vh;\n    min-
 /* 852 */
 /***/ function(module, exports) {
 
-module.exports = ""
+module.exports = ".title {\r\n  position: relative;\r\n  padding: 0.3em 0.3em 0.3em 0;\r\n  align-self: left;\r\n  height: 15em;\r\n  width: 15em;\r\n}\r\n"
 
 /***/ },
 /* 853 */
@@ -78268,7 +78246,7 @@ module.exports = ""
 /* 858 */
 /***/ function(module, exports) {
 
-module.exports = ".search-box {\r\n    text-align: center;\r\n}\r\n\r\n.search-button {\r\n    font-size: 36px; \r\n}\r\n\r\n.material-icons {\r\n    color: rgba(3, 169, 244, 1);\r\n    \r\n}\r\n\r\n.button md-icon-button {\r\n    padding: 2px, 2px, 2px, 2px;\r\n}\r\n\r\n"
+module.exports = ".search-box {\r\n    text-align: center;\r\n}\r\n\r\n.search-button {\r\n    font-size: 36px; \r\n}\r\n\r\n.material-icons {\r\n    color: #005BBB;\r\n    \r\n}\r\n\r\n.button md-icon-button {\r\n    padding: 2px, 2px, 2px, 2px;\r\n}\r\n\r\n"
 
 /***/ },
 /* 859 */
@@ -78286,7 +78264,7 @@ module.exports = ".search {\r\n  width: 25em;\r\n  position: relative;\r\n  heig
 /* 861 */
 /***/ function(module, exports) {
 
-module.exports = "<div>\r\n  <md-toolbar color=\"primary\">\r\n    <span>\r\n      <md-icon class=\"icon-20\">language</md-icon>\r\n      {{ title }}\r\n    </span>\r\n   \r\n\r\n    <button md-icon-button [md-menu-trigger-for]=\"menu\">\r\n      <md-icon>menu</md-icon>\r\n    </button>\r\n\r\n    <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n      <button md-menu-item (click)=\"openUserSettings()\">Settings</button>\r\n      <button md-menu-item>Help</button>\r\n    </md-menu>\r\n  </md-toolbar>\r\n\r\n  <app-nav></app-nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n\r\n\r\n"
+module.exports = "<div>\r\n  <md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"../assets/slova_text_yellow_logo.png\"/>\r\n    </span>\r\n\r\n    <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n      <md-icon>menu</md-icon>\r\n    </button>\r\n\r\n    <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n      <button md-menu-item (click)=\"openUserSettings()\">Settings</button>\r\n      <button md-menu-item>Help</button>\r\n    </md-menu>\r\n  </md-toolbar>\r\n\r\n  <app-nav></app-nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n\r\n\r\n\r\n"
 
 /***/ },
 /* 862 */
@@ -78310,7 +78288,7 @@ module.exports = "<div class=\"col-md-6\">\r\n\t<div class=\"card card-block\">\
 /* 865 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"demo-nav-bar\">\r\n  <nav md-tab-nav-bar>\r\n    <a md-tab-link\r\n       *ngFor=\"let tabLink of tabLinks; let i = index\"\r\n       [routerLink]=\"tabLink.link\"\r\n       [active]=\"activeLinkIndex === i\"\r\n       (click)=\"activeLinkIndex = i\">\r\n      {{tabLink.label}}\r\n    </a>\r\n  </nav>\r\n</div>"
+module.exports = "<div class=\"demo-nav-bar\">\r\n  <nav md-tab-nav-bar>\r\n    <a md-tab-link  \r\n       *ngFor=\"let tabLink of tabLinks; let i = index\"\r\n       [routerLink]=\"tabLink.link\"\r\n       [active]=\"activeLinkIndex === i\"\r\n       (click)=\"activeLinkIndex = i\">\r\n      {{tabLink.label}}\r\n    </a>\r\n  </nav>\r\n</div>"
 
 /***/ },
 /* 866 */
@@ -78340,13 +78318,13 @@ module.exports = "<p>\r\n  tests works!\r\n</p>\r\n"
 /* 870 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"search-box\">\r\n    <form #searchForm='ngForm' (ngSubmit)=\"translationSearch(searchForm.value)\"  novalidate>\r\n        <div class=\"form-group\">\r\n            <label for=\"searchInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Add word\"\r\n                name=\"search\"\r\n                #search='ngModel'\r\n                [(ngModel)]=\"search.search\"\r\n            ></md-input>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"langInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Lanuage (e.g. 'en')\"\r\n                name=\"target_lang\"\r\n                #target_lang='ngModel'\r\n                [(ngModel)]=\"search.target_lang\"\r\n            ></md-input>\r\n        </div>\r\n        <button md-icon-button type=\"submit\" class=\"search-button\">\r\n            <md-icon class=\"material-icons\">youtube_searched_for</md-icon>\r\n        </button>\r\n    </form>\r\n    <br>\r\n    <div *ngIf=\"yandexTranslation\">\r\n        <h4>{{ yandexTranslation._body }}</h4>\r\n        <button md-icon-button (click)=\"saveTranslation()\">\r\n            <md-icon class=\"material-icons\">add_circle</md-icon>\r\n        </button>\r\n        <button md-icon-button (click)=\"cancelTranslation()\">\r\n            <md-icon class=\"material-icons\" color=\"warn\">cancel</md-icon>\r\n        </button>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"search-box\">\r\n    <form #searchForm='ngForm' (ngSubmit)=\"translationSearch(searchForm.value)\"  novalidate>\r\n        <div class=\"form-group\">\r\n            <label for=\"searchInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Add word\"\r\n                name=\"search\"\r\n                #search='ngModel'\r\n                [(ngModel)]=\"search.search\"\r\n            ></md-input>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"langInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Lanuage (e.g. 'en')\"\r\n                name=\"target_lang\"\r\n                #target_lang='ngModel'\r\n                [(ngModel)]=\"search.target_lang\"\r\n            ></md-input>\r\n        </div>\r\n        <button md-icon-button type=\"submit\" class=\"search-button\">\r\n            <md-icon class=\"material-icons\">youtube_searched_for</md-icon>\r\n        </button>\r\n    </form>\r\n    <br>\r\n    <div *ngIf=\"yandexTranslation\">\r\n        <h4>{{ yandexTranslation._body }}</h4>\r\n        <button md-icon-button (click)=\"saveTranslation()\">\r\n            <md-icon class=\"material-icons\">add_circle</md-icon>\r\n        </button>\r\n        <button md-icon-button (click)=\"cancelTranslation()\">\r\n            <md-icon class=\"material-icons\" color=\"accent\">cancel</md-icon>\r\n        </button>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ },
 /* 871 */
 /***/ function(module, exports) {
 
-module.exports = "<ul class=\"translations\">\r\n    <li *ngFor=\"let translation of translations\"\r\n      [class.selected]=\"translation === selectedTranslation\"\r\n      (click)=\"onSelect(translation)\">\r\n      <span class=\"text\">{{ translation.display }}</span>\r\n      <div class=\"button-box\">\r\n        <button md-button class=\"button1\" color=\"primary\">Add</button>\r\n        <button md-button class=\"button2\" color=\"warn\" (click)=\"deleteTranslation(translation)\">Delete</button>\r\n      </div>\r\n    </li>\r\n  </ul>\r\n"
+module.exports = "<ul class=\"translations\">\r\n    <li *ngFor=\"let translation of translations\"\r\n      [class.selected]=\"translation === selectedTranslation\"\r\n      (click)=\"onSelect(translation)\">\r\n      <span class=\"text\">{{ translation.display }}</span>\r\n      <div class=\"button-box\">\r\n        <button md-button class=\"button1\" color=\"primary\">Add</button>\r\n        <button md-button class=\"button2\" color=\"accent\" (click)=\"deleteTranslation(translation)\">Delete</button>\r\n      </div>\r\n    </li>\r\n  </ul>\r\n"
 
 /***/ },
 /* 872 */
@@ -91917,7 +91895,31 @@ if (_global['navigator'] && _global['navigator'].geolocation) {
 /* 1130 */
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(509);
+module.exports = __webpack_require__(1133);
+
+
+/***/ },
+/* 1131 */,
+/* 1132 */,
+/* 1133 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(681);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__polyfills_ts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(635);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(680);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app___ = __webpack_require__(672);
+
+
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
+}
+__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app___["a" /* AppModule */]);
 
 
 /***/ }
