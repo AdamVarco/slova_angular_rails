@@ -11,6 +11,7 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'yandex-translator'
 gem 'figaro'
+gem 'rack-attack'
 
 group :development, :test do
   gem 'byebug', platform: :mri

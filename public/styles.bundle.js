@@ -290,17 +290,9 @@ if(false) {
 /***/ },
 
 /***/ 1133:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-exports = module.exports = __webpack_require__(471)();
-// imports
-
-
-// module
-exports.push([module.i, "/* Master Styles */\r\n\r\nbody {\r\n  margin: 0;\r\n  font-family: Lucida Sans Unicode, sans-serif;\r\n}\r\n\r\nmd-toolbar-row {\r\n  justify-content: space-between;\r\n}\r\n\r\np {\r\n  margin: 16px;\r\n}\r\n\r\n[md-raised-button] {\r\n  width: 100%;\r\n}\r\n\r\nmd-grid-list {\r\n  max-width: 1403px;\r\n  margin: 16px;\r\n}\r\n\r\nmd-sidenav-layout {\r\n  height: 100vh;\r\n}\r\n\r\nmd-sidenav {\r\n  width: 100%;\r\n}\r\n\r\n.icon-20 {\r\n  top: 50px;\r\n  font-size: 20px;\r\n}\r\n\r\n* {\r\n  -webkit-font-smoothing: antialiased;\r\n  -moz-osx-font-smoothing: grayscale;\r\n}", ""]);
-
-// exports
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open '/Users/grantgarland/Projects/Capstone/slova_angular_rails/angular/src/styles.css'");
 
 /***/ },
 

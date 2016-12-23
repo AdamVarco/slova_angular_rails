@@ -21579,7 +21579,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var TranslationService = (function () {
     function TranslationService(http) {
         this.http = http;
-        this.translationsUrl = 'http://localhost:3000/translations/';
+        this.translationsUrl = '/translations';
     }
     TranslationService.prototype.getTranslations = function () {
         return this.http.get(this.translationsUrl)
@@ -50683,8 +50683,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var NewTranslationService = (function () {
     function NewTranslationService(http) {
         this.http = http;
-        this.searchTranslationUrl = 'http://localhost:3000/translations/search';
-        this.createTranslationUrl = 'http://localhost:3000/translations';
+        this.searchTranslationUrl = '/translations/search';
+        this.createTranslationUrl = '/translations';
     }
     NewTranslationService.prototype.getTranslation = function (search) {
         this.userSearch = search;
