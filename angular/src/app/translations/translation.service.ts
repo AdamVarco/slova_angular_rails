@@ -18,7 +18,7 @@ export class TranslationService {
     }
 
     deleteTranslation(translation: Translation) {
-      return this.http.delete(this.translationsUrl + translation.id)
+      return this.http.delete(this.translationsUrl + "/" + translation.id)
                   .catch(this.handleError);
     }
 
