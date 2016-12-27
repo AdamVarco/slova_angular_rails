@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { Translation } from './translation.model';
+import { Translation } from '../_models/translation.model';
 
 @Injectable()
 export class TranslationService {

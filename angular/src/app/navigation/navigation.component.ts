@@ -15,7 +15,7 @@ export class NavigationComponent {
     {label: 'Translations', link: 'translations'},
     {label: 'Tests', link: 'tests'},
     {label: 'Add Word', link: 'new_translation'},
-    {label: 'Profile', link: 'profile'}
+    {label: 'Settings', link: 'settings'}
   ];
   activeLinkIndex = 0;
 
@@ -33,7 +33,7 @@ export class NavigationComponent {
       label: 'Add Word',
       disabled: true},
     {
-      label: 'Profile',
+      label: 'Settings',
       diabled: true}
   ];
 

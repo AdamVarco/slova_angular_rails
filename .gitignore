@@ -4,7 +4,11 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+# not sure which of these three actually ignores the public logs...they keep showing up!
 /public/*
+public/*
+/public*
+
 .DS_Store
 
 # Ignore bundler config.

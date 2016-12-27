@@ -7,7 +7,8 @@ import { Angular2TokenService } from 'angular2-token';
   selector: 'app-landing',
   templateUrl: 'landing.component.html'
 })
-export class LandingComponent { 
+export class LandingComponent {
+     
   
    private _showImprint: boolean = false;
 

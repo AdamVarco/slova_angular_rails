@@ -1,7 +1,7 @@
 import { Component, Input, ChangeDetectorRef } from '@angular/core';
 
-import { Translation } from '../translation.model';
-import { TranslationService } from '../translation.service';
+import { Translation } from '../../_models/translation.model';
+import { TranslationService } from '../../_services/translation.service';
 
 @Component({
   selector: 'translation-list',

@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TranslationsComponent } from './translations/translations.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
 import { TestsComponent } from './tests/tests.component';
-import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const appRoutes: Routes = [
     { 
@@ -30,8 +30,8 @@ const appRoutes: Routes = [
         component: TestsComponent   
      },
     { 
-        path: 'profile', 
-        component: ProfileComponent
+        path: 'settings', 
+        component: SettingsComponent
      },
     { 
         path: '', redirectTo: 'landing', 

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
-import { Translation } from '../translation.model';
-import { NewTranslationService } from './new_translation.service';      
+import { Translation } from '../../_models/translation.model';
+import { NewTranslationService } from '../../_services/new_translation.service';      
 
 @Component({
     moduleId: 'module.id',

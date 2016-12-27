@@ -19,7 +19,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
-import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 import { QuestionsComponent } from './tests/questions/questions.component';
 import { TestComponent } from './tests/test/test.component';
 import { TestsComponent } from './tests/tests.component';
@@ -29,11 +29,8 @@ import { TranslationsComponent } from './translations/translations.component';
 import { TranslationListComponent } from './translations/translation-list/translation-list.component';
 
 // Services and configuration
-import { TranslationService } from './translations/translation.service';
-import { NewTranslationService } from './translations/new_translation/new_translation.service';
-import { TestService } from './tests/test.service';
-
-
+import { TranslationService } from './_services/translation.service';
+import { NewTranslationService } from './_services/new_translation.service';
 
 @NgModule({
   imports: [
@@ -56,12 +53,11 @@ import { TestService } from './tests/test.service';
     TestsComponent,
     TestComponent,
     QuestionsComponent,
-    ProfileComponent,
+    SettingsComponent,
   ],
   providers: [
     TranslationService,
     NewTranslationService,
-    TestService,
     AUTH_PROVIDERS,
     Angular2TokenService
   ],
