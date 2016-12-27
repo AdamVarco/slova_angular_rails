@@ -11,8 +11,6 @@ export class AppComponent {
   
   title = "Slova";
 
-  constructor(private _tokenService: Angular2TokenService) {
-        this._tokenService.init();
-    }
+  constructor() {}
 
  }

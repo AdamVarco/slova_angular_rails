@@ -18,7 +18,6 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "assets/styles.css",
         "slova-theme.scss"
       ],
       "scripts": [

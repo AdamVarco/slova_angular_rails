@@ -16,15 +16,33 @@ export class NewUserComponent {
 
   constructor(private _tokenService: Angular2TokenService) {
       this._tokenService.init({
-          registerAccountPath: 'https://localhost:3000/auth',
-          
+          apiPath:                    null,
+
+          signInPath:                 'auth/sign_in',
+          signInRedirect:             'dashboard',
+          signInStoredUrlStorageKey:  null,
+
+          signOutPath:                'auth/sign_out',
+          validateTokenPath:          'auth/validate_token',
+          signOutFailedValidate:      false,
+
+          registerAccountPath:        'auth',
+          deleteAccountPath:          'auth',
+          registerAccountCallback:    window.location.href,
+
+          updatePasswordPath:         'auth',
+          resetPasswordPath:          'auth/password',
+          resetPasswordCallback:      window.location.href,
+
+          userTypes:                  null,
+
           globalOptions: {
-            headers: {
-                'Content-Type':     'application/json',
-                'Accept':           'application/json'
-            }
-        }
-      });
+              headers: {
+                  'Content-Type':     'application/json',
+                  'Accept':           'application/json'
+              }
+          }
+        });
    }
 
   onSubmit() {
