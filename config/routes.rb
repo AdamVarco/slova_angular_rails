@@ -11,10 +11,4 @@ Rails.application.routes.draw do
       end
     end
   end
-  # resources :translations do
-  #   collection do
-  #     post :search
-  #   end
-  #
-  # end
 end
