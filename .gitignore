@@ -4,10 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# not sure which of these three actually ignores the public logs...they keep showing up!
-/public/*
+# Ignore public build files
 public/*
-/public*
+!public/assets
 
 .DS_Store
 
@@ -15,16 +14,19 @@ public/*
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+log*
+tmp/
+/tmp*
 !/log/.keep
 !/tmp/.keep
-log/development.log
-tmp/*
 
 # Ignore Byebug command history file.
 .byebug_history
-log
+
+# Ignore application configuration
+/config/application.yml
+/config/databse.yml
+/config/initializers/
 
 # Ignore application configuration
 /config/application.yml

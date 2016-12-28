@@ -11,7 +11,7 @@ import { TranslationService } from '../_services/translation.service';
 })
 export class DashboardComponent implements OnInit {
 
-    translations: Translation[];
+  translations: Translation[];
   errorMessage: string;
   mode = "Observable";
 

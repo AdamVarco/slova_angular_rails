@@ -11,8 +11,8 @@ export class NewTranslationService {
 
     constructor( private http: Http ) { }
 
-    private searchTranslationUrl = '/translations/search';
-    private createTranslationUrl = '/translations';
+    private searchTranslationUrl = '/api/v1/translations/search';
+    private createTranslationUrl = '/api/v1/translations';
 
     public getTranslation(search) {
         this.userSearch = search;

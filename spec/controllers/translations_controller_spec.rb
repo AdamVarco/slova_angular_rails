@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe TranslationsController, type: :controller do
+RSpec.describe API::V1::TranslationsController, type: :controller do
   let(:valid_translation) { create(:translation) }
   let(:invalid_translation) { build(:invalid_translation)}
 

@@ -1,4 +1,4 @@
-class TranslationsController < ApplicationController
+class API::V1::TranslationsController < ApplicationController
   # before_action :authenticate_user
 
   # GET /translations
@@ -17,7 +17,7 @@ class TranslationsController < ApplicationController
       render json: @warning
     else
         @pending_translation = TranslationService.new({search: params[:search], target_lang: params[:target_lang]}).search
-        
+
 
         render json: @pending_translation
     end

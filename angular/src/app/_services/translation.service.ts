@@ -7,7 +7,7 @@ import { Translation } from '../_models/translation.model';
 @Injectable()
 export class TranslationService {
 
-    private translationsUrl = '/translations';
+    private translationsUrl = '/api/v1/translations';
 
     constructor( private http: Http ) {}
 

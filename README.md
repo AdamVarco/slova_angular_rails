@@ -1,24 +1,12 @@
-# README
+# Slova
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Intelligent vocabulary learning application 
 
-Things you may want to cover:
+* Built using Rails 5, Angular 2, and [Yandex translation service](https://tech.yandex.ru/translate/?ncrnd=2618)
 
-* Ruby version
+* Authentication using [Devise Token Auth](https://github.com/lynndylanhurley/devise_token_auth) and [Angular2-Token](https://github.com/neroniaky/angular2-token)
 
-* System dependencies
+* Tested using RSpec and FactoryGirl
 
-* Configuration
+* Styled with [Angular Material Design](https://github.com/angular/material2) in mind
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
