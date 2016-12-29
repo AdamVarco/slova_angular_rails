@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { Angular2TokenService } from 'angular2-token';
 
 @Component({
@@ -8,9 +9,10 @@ import { Angular2TokenService } from 'angular2-token';
 })
 
 export class AppComponent {
+
+  private _showImprint: boolean = false;
   
-  title = "Slova";
-
-  constructor() {}
-
- }
+  constructor(private _tokenService: Angular2TokenService) {
+    this._tokenService.init();
+  }
+}

@@ -4,14 +4,17 @@
       <img class="title" src="../assets/slova_text_yellow_logo.png"/>
     </span>
 
-    <button md-icon-button [md-menu-trigger-for]="menu" color="accent">
-      <md-icon>menu</md-icon>
-    </button>
+    <div *ngIf="currentUser">
+      <button md-icon-button [md-menu-trigger-for]="menu" color="accent">
+        <md-icon>menu</md-icon>
+      </button>
 
-    <md-menu x-position="before" #menu="mdMenu">
-      <button md-menu-item (click)="openUserSettings()">Settings</button>
-      <button md-menu-item>Help</button>
-    </md-menu>
+      <md-menu x-position="before" #menu="mdMenu">
+        <button md-menu-item (click)="openUserSettings()">Settings</button>
+        <button md-menu-item>Help</button>
+        <button md-menu-item (click)="signOut()">Sign Out</button>
+      </md-menu>
+    </div>
   </md-toolbar>
 
   <app-nav></app-nav>

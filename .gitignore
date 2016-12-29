@@ -5,7 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore public build files
-public/*
+public
 !public/assets
 
 .DS_Store

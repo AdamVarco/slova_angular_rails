@@ -1,7 +1,13 @@
 {
-  "name": "slova",
+  "name": "Slova",
   "version": "0.0.0",
+  "description": "Intelligent vocabulary learning application",
   "license": "MIT",
+  "author": "Grant Garland <github.com/SlovaDev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlovaDev/slova_angular_rails.git"
+  },
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",

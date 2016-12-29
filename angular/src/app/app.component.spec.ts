@@ -4,10 +4,6 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
- 
-import { TranslationService } from './translations/translation.service';
-import { Auth } from './auth/auth.service';
-
 
 describe('AppComponent', () => {
   beforeEach(() => {

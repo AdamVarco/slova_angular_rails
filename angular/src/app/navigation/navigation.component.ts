@@ -14,8 +14,7 @@ export class NavigationComponent {
     {label: 'Dashboard', link: 'dashboard'},
     {label: 'Translations', link: 'translations'},
     {label: 'Tests', link: 'tests'},
-    {label: 'Add Word', link: 'new_translation'},
-    {label: 'Settings', link: 'settings'}
+    {label: 'Add Word', link: 'new_translation'}
   ];
   activeLinkIndex = 0;
 
@@ -32,9 +31,6 @@ export class NavigationComponent {
     {
       label: 'Add Word',
       disabled: true},
-    {
-      label: 'Settings',
-      diabled: true}
   ];
 
   asyncTabs: Observable<any>;

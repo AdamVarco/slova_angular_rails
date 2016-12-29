@@ -1,21 +1,23 @@
 // External Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { Angular2TokenService, A2tUiModule } from 'angular2-token';
 
-// adds functionality to Observable query objects
+// Adds functionality to Observable query objects
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/do';
 
-import { AppRoutingModule } from './app-routing.module';
-import { LandingModule } from './landing/landing.module';
+// Internal Modules
+import { AppRoutingModule } from './app_routing.module';
+import { AuthModule } from './auth/auth.module';
 
 // Smart components
 import { AppComponent } from './app.component';
+import { LandingComponent } from './landing/landing.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
@@ -37,14 +39,16 @@ import { NewTranslationService } from './_services/new_translation.service';
     MaterialModule.forRoot(),
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    LandingModule,
+    AuthModule,
     A2tUiModule
   ],
   exports: [ MaterialModule ],
   declarations: [
     AppComponent,
+    LandingComponent,
     NavigationComponent,
     DashboardComponent,
     TranslationsComponent,
