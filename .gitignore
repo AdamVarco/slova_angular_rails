@@ -9,6 +9,7 @@ public
 !public/assets
 
 .DS_Store
+node_modules
 
 # Ignore bundler config.
 /.bundle

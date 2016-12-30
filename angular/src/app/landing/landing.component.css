@@ -1,11 +1,7 @@
-.h2 {
-    text-align: center,
+container {
+    text-align: center;
 }
 
-.h4 {
-    text-align: center,
-}
-
-.button {
-    text-align: center,
+h2 {
+    text-align: center;
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Angular2TokenService } from 'angular2-token';
+
 import { Translation } from '../_models/translation.model';
 import { TranslationService } from '../_services/translation.service';
 
@@ -11,11 +13,14 @@ import { TranslationService } from '../_services/translation.service';
 })
 export class DashboardComponent implements OnInit {
 
-  translations: Translation[];
-  errorMessage: string;
-  mode = "Observable";
+  private translations: Translation[];
+  private errorMessage: string;
+  private mode = "Observable";
+  private _showImprint: boolean = false;
 
-  constructor(private translationService: TranslationService) { }
+  constructor(private translationService: TranslationService, private _tokenService: Angular2TokenService) {
+    this._tokenService.init();
+   }
 
   ngOnInit(): void {
     this.getTranslations();

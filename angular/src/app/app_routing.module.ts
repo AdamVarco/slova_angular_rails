@@ -10,6 +10,7 @@ import { NewTranslationComponent } from './translations/new_translation/new_tran
 import { TestsComponent } from './tests/tests.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NewUserComponent } from './auth/new_user/new_user.component';
+import { SignInComponent } from './auth/sign_in/sign_in.component';
 
 const appRoutes: Routes = [
     { 
@@ -38,6 +39,10 @@ const appRoutes: Routes = [
      { 
         path: 'new_user', 
         component: NewUserComponent
+     },
+     { 
+        path: 'sign_in', 
+        component: SignInComponent
      },
     { 
         path: '', redirectTo: 'landing', 

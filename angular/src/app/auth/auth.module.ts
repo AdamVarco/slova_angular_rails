@@ -7,8 +7,7 @@ import { RouterModule } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token';
 
 import { NewUserComponent } from './new_user/new_user.component';
-// import { SignInComponent } from './sign_in/sign_in.component';
-// import { SignOutComponent } from './sign_out/sign_out.component';
+import { SignInComponent } from './sign_in/sign_in.component';
 
 @NgModule({
     imports: [
@@ -17,7 +16,8 @@ import { NewUserComponent } from './new_user/new_user.component';
         RouterModule
     ],
     declarations: [
-        NewUserComponent
+        NewUserComponent,
+        SignInComponent
     ],
     providers: [
         Angular2TokenService

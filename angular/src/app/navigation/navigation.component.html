@@ -1,6 +1,6 @@
 <div class="demo-nav-bar">
   <nav md-tab-nav-bar text-align="center">
-    <a md-tab-link  
+    <a md-tab-link id="override-nav"
        *ngFor="let tabLink of tabLinks; let i = index"
        [routerLink]="tabLink.link"
        [active]="activeLinkIndex === i"

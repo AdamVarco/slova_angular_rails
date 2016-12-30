@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/Observable';
   moduleId: 'module.id',
   selector: 'app-nav',
   templateUrl: 'navigation.component.html',
+  styleUrls: ['navigation.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
 

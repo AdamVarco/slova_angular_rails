@@ -57,7 +57,7 @@ import { NewTranslationService } from './_services/new_translation.service';
     TestsComponent,
     TestComponent,
     QuestionsComponent,
-    SettingsComponent,
+    SettingsComponent
   ],
   providers: [
     TranslationService,

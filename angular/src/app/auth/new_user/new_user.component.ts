@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
@@ -14,7 +15,7 @@ export class NewUserComponent {
   private _registerData: RegisterData = <RegisterData>{};
   private _output: any;
 
-  constructor(private _tokenService: Angular2TokenService) { }
+  constructor(private _tokenService: Angular2TokenService, private router: Router) {}
 
   onSubmit() {
 
@@ -24,6 +25,7 @@ export class NewUserComponent {
             res => {
                 this._registerData  = <RegisterData>{};
                 this._output        = res;
+                this.router.navigate(['/dashboard']);
             }, error => {
                 this._registerData  = <RegisterData>{};
                 this._output        = error;

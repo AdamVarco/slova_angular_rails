@@ -1,7 +1,6 @@
 .title {
-  position: relative;
-  padding: 0.3em 0.3em 0.3em 0;
-  align-self: center;
-  height: 18em;
   width: 18em;
+  position: absolute;
+  top: -150px;
+  left: -75px;
 }
