@@ -1,0 +1,19 @@
+<md-toolbar color="primary">
+    <span>
+      <img class="title" src="../assets/slova_text_yellow_logo.png"/>
+    </span>
+
+    <div>
+      <button md-icon-button [md-menu-trigger-for]="menu" color="accent">
+        <md-icon>menu</md-icon>
+      </button>
+
+      <md-menu x-position="before" #menu="mdMenu">
+        <button md-menu-item *ngIf="!loggedIn" routerLink="/sign_in" routerLinkActive="active">Sign In</button>
+        <button md-menu-item *ngIf="!loggedIn" routerLink="/new_user" routerLinkActive="active">Sign Up</button>
+        <button md-menu-item *ngIf="loggedIn" (click)="openUserSettings()">Settings</button>
+        <button md-menu-item *ngIf="loggedIn">Help</button>
+        <button md-menu-item *ngIf="loggedIn" routerLink="/sign_in" routerLinkActive="active" (click)="signOut()">Sign Out</button>
+      </md-menu>
+    </div>
+  </md-toolbar>

@@ -17,8 +17,9 @@ import { AuthModule } from './auth/auth.module';
 
 // Smart components
 import { AppComponent } from './app.component';
-import { LandingComponent } from './landing/landing.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LandingComponent } from './landing/landing.component';
+import { MenuComponent } from './menu/menu.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { NewTranslationComponent } from './translations/new_translation/new_translation.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -33,6 +34,8 @@ import { TranslationListComponent } from './translations/translation-list/transl
 // Services and configuration
 import { TranslationService } from './_services/translation.service';
 import { NewTranslationService } from './_services/new_translation.service';
+import { UserService } from './_services/user.service';
+
 
 @NgModule({
   imports: [
@@ -48,22 +51,24 @@ import { NewTranslationService } from './_services/new_translation.service';
   exports: [ MaterialModule ],
   declarations: [
     AppComponent,
-    LandingComponent,
-    NavigationComponent,
     DashboardComponent,
-    TranslationsComponent,
+    LandingComponent,
+    MenuComponent,
+    NavigationComponent, 
     NewTranslationComponent,
+    SettingsComponent,
+    TranslationsComponent,
     TranslationListComponent,
     TestsComponent,
     TestComponent,
     QuestionsComponent,
-    SettingsComponent
   ],
   providers: [
+    AUTH_PROVIDERS,
+    Angular2TokenService,
     TranslationService,
     NewTranslationService,
-    AUTH_PROVIDERS,
-    Angular2TokenService
+    UserService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,23 +1,5 @@
 <div>
-  <md-toolbar color="primary">
-    <span>
-      <img class="title" src="../assets/slova_text_yellow_logo.png"/>
-    </span>
-
-    <div>
-      <button md-icon-button [md-menu-trigger-for]="menu" color="accent">
-        <md-icon>menu</md-icon>
-      </button>
-
-      <md-menu x-position="before" #menu="mdMenu">
-        <button md-menu-item routerLink="/sign_in" routerLinkActive="active">Sign In</button>
-        <button md-menu-item routerLink="/landing" routerLinkActive="active" (click)="signOut()">Sign Out</button>
-        <button md-menu-item (click)="openUserSettings()">Settings</button>
-        <button md-menu-item>Help</button>
-      </md-menu>
-    </div>
-  </md-toolbar>
-
+  <app-menu></app-menu>
   <app-nav></app-nav>
   <router-outlet></router-outlet>
 </div>

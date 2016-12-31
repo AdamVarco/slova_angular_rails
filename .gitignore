@@ -5,6 +5,14 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore public build files
+/public/**
+/public/*
+/public**
+/public*
+public/**
+public/*
+public**
+public*
 public
 !public/assets
 
@@ -26,8 +34,9 @@ tmp/
 
 # Ignore application configuration
 /config/application.yml
-/config/databse.yml
+/config/database.yml
 /config/initializers/
+/config/secrets.yml
 
 # Ignore application configuration
 /config/application.yml

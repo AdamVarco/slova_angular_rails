@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router'
+
 import { Angular2TokenService, SignInData } from 'angular2-token';
 
 @Component({
