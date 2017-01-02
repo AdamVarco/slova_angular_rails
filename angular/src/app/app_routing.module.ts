@@ -50,7 +50,8 @@ const appRoutes: Routes = [
         component: SignInComponent
      },
     { 
-        path: '', redirectTo: 'landing', 
+        path: '', 
+        redirectTo: 'landing', 
         pathMatch: 'full' },
     { 
         path: '**', 

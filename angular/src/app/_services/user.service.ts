@@ -11,7 +11,9 @@ export class UserService {
     private _output: any;
 
     constructor(private _tokenService: Angular2TokenService, private router: Router) {
-        this._tokenService.init();
+        this._tokenService.init({
+            signInRedirect:             'landing',
+        });
     }
 
     signOut() {
@@ -27,6 +29,6 @@ export class UserService {
     }
 
     loggedIn() {
-        return this._tokenService.userSignedIn();
+        return this._tokenService.currentAuthData;
     }
 }

@@ -30,7 +30,7 @@ import { TranslationsComponent } from './translations/translations.component';
 
 // Presentation components
 import { TranslationListComponent } from './translations/translation-list/translation-list.component';
-
+import { CustomPipe } from './dashboard/name.pipe';
 // Services and configuration
 import { TranslationService } from './_services/translation.service';
 import { NewTranslationService } from './_services/new_translation.service';
@@ -51,6 +51,7 @@ import { UserService } from './_services/user.service';
   exports: [ MaterialModule ],
   declarations: [
     AppComponent,
+    CustomPipe,
     DashboardComponent,
     LandingComponent,
     MenuComponent,

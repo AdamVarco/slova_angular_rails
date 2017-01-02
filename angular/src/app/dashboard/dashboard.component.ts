@@ -4,6 +4,7 @@ import { Angular2TokenService } from 'angular2-token';
 
 import { Translation } from '../_models/translation.model';
 import { TranslationService } from '../_services/translation.service';
+import { CustomPipe } from './name.pipe';
 
 @Component({
     moduleId: 'module.id',

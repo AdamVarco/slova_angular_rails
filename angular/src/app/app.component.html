@@ -1,6 +1,6 @@
 <div>
   <app-menu></app-menu>
-  <app-nav></app-nav>
+  <div *ngIf="_tokenService.currentAuthData"><app-nav></app-nav></div>
   <router-outlet></router-outlet>
 </div>
 

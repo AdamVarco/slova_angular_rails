@@ -9,11 +9,11 @@
       </button>
 
       <md-menu x-position="before" #menu="mdMenu">
-        <button md-menu-item *ngIf="!loggedIn" routerLink="/sign_in" routerLinkActive="active">Sign In</button>
-        <button md-menu-item *ngIf="!loggedIn" routerLink="/new_user" routerLinkActive="active">Sign Up</button>
-        <button md-menu-item *ngIf="loggedIn" (click)="openUserSettings()">Settings</button>
-        <button md-menu-item *ngIf="loggedIn">Help</button>
-        <button md-menu-item *ngIf="loggedIn" routerLink="/sign_in" routerLinkActive="active" (click)="signOut()">Sign Out</button>
+        <button md-menu-item *ngIf="!_tokenService.currentAuthData" routerLink="/sign_in" routerLinkActive="active">Sign In</button>
+        <button md-menu-item *ngIf="!_tokenService.currentAuthData" routerLink="/new_user" routerLinkActive="active">Sign Up</button>
+        <button md-menu-item *ngIf="_tokenService.currentAuthData" (click)="openUserSettings()">Settings</button>
+        <button md-menu-item *ngIf="_tokenService.currentAuthData">Help</button>
+        <button md-menu-item *ngIf="_tokenService.currentAuthData" routerLink="/sign_in" routerLinkActive="active" (click)="signOut()">Sign Out</button>
       </md-menu>
     </div>
   </md-toolbar>
