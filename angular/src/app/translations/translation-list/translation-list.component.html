@@ -1,4 +1,5 @@
-<ul class="translations">
+<div class="content-area">
+  <ul class="translations">
     <li *ngFor="let translation of translations"
       [class.selected]="translation === selectedTranslation"
       (click)="onSelect(translation)">
@@ -9,3 +10,4 @@
       </div>
     </li>
   </ul>
+</div>
