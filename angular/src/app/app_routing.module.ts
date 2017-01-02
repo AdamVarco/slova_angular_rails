@@ -18,23 +18,28 @@ const appRoutes: Routes = [
         component: LandingComponent },
     { 
         path: 'dashboard', 
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [Angular2TokenService]
      },
     { 
         path: 'translations', 
-        component: TranslationsComponent
+        component: TranslationsComponent,
+        canActivate: [Angular2TokenService]
      },
     { 
         path: 'new_translation', 
-        component: NewTranslationComponent    
+        component: NewTranslationComponent,
+        canActivate: [Angular2TokenService]    
      },
     { 
         path: 'tests', 
-        component: TestsComponent   
+        component: TestsComponent,
+        canActivate: [Angular2TokenService]   
      },
     { 
         path: 'settings', 
-        component: SettingsComponent
+        component: SettingsComponent,
+        canActivate: [Angular2TokenService]
      },
      { 
         path: 'new_user', 
