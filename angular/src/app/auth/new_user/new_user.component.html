@@ -13,6 +13,16 @@
 					name="email">
 			</div>
 			<div class="form-group">
+				<label for="formGroupExampleInput">Target Language</label>
+				<select name="target_lang"
+					class="form-control"
+					placeholder="Target Language"
+					required
+					[(ngModel)]="_registerData.target_lang">
+					<option *ngFor="let lang of langs" [ngValue]="lang.value">{{ lang.display }}</option>
+				</select>
+			</div>
+			<div class="form-group">
 				<label for="formGroupExampleInput">Password</label>
 				<input type="password"
 					class="form-control"

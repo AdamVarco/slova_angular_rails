@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { registrations: 'registrations' }, only: [:create, :update]
+
   mount_devise_token_auth_for 'User', at: 'auth'
 
   namespace :api do
