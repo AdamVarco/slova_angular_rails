@@ -35,12 +35,13 @@ export class NewUserComponent {
   onSubmit() {
         console.log(this._registerData);
         this._output = null;
+        this.
 
         this._tokenService.registerAccount(this._registerData).subscribe(
             res => {
                 this._registerData  = <RegisterData>{};
                 this._output        = res;
-                this.router.navigate(['/dashboard']);
+                this.router.navigate(['/new_translation']);
             }, error => {
                 this._registerData  = <RegisterData>{};
                 this._output        = error;

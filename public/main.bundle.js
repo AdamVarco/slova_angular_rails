@@ -50334,6 +50334,8 @@ var A2tUpdatePasswordComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_token__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_token__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NewTranslationService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -50348,9 +50350,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewTranslationService = (function () {
-    function NewTranslationService(http) {
+    function NewTranslationService(http, _tokenService) {
         this.http = http;
+        this._tokenService = _tokenService;
         this.searchTranslationUrl = '/api/v1/translations/search';
         this.createTranslationUrl = '/api/v1/translations';
     }
@@ -50364,7 +50368,7 @@ var NewTranslationService = (function () {
         return yandexTranslation;
     };
     NewTranslationService.prototype.saveTranslation = function (yandexTranslation) {
-        var params = JSON.stringify({ native: this.userSearch["search"], target: yandexTranslation["_body"] });
+        var params = JSON.stringify({ native: this.userSearch["search"], target: yandexTranslation["_body"], user_id: this._tokenService.currentUserData.id });
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]({ 'Content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["RequestOptions"]({ headers: headers });
         return this.http.post(this.createTranslationUrl, params, {
@@ -50386,10 +50390,10 @@ var NewTranslationService = (function () {
     };
     NewTranslationService = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4_angular2_token__["Angular2TokenService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4_angular2_token__["Angular2TokenService"]) === 'function' && _b) || Object])
     ], NewTranslationService);
     return NewTranslationService;
-    var _a;
+    var _a, _b;
 }());
 
 
@@ -50578,10 +50582,11 @@ var NewUserComponent = (function () {
         var _this = this;
         console.log(this._registerData);
         this._output = null;
-        this._tokenService.registerAccount(this._registerData).subscribe(function (res) {
+        this.
+            this._tokenService.registerAccount(this._registerData).subscribe(function (res) {
             _this._registerData = {};
             _this._output = res;
-            _this.router.navigate(['/dashboard']);
+            _this.router.navigate(['/new_translation']);
         }, function (error) {
             _this._registerData = {};
             _this._output = error;
@@ -74965,7 +74970,9 @@ var CustomPipe = (function () {
     function CustomPipe() {
     }
     CustomPipe.prototype.transform = function (value) {
-        return value.indexOf('@') > -1 ? value.split('@')[0] : value;
+        if (value) {
+            return value.indexOf('@') > -1 ? value.split('@')[0] : value;
+        }
     };
     CustomPipe = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
@@ -78432,7 +78439,7 @@ module.exports = "container {\r\n    text-align: center;\r\n}\r\n\r\nh2 {\r\n   
 /* 854 */
 /***/ function(module, exports) {
 
-module.exports = ".title {\r\n  width: 18em;\r\n  position: absolute;\r\n  top: -150px;\r\n  left: -75px;\r\n}"
+module.exports = ".white {\r\n  background-color: white;\r\n}\r\n\r\n.title {\r\n  width: 18em;\r\n  position: absolute;\r\n  top: -150px;\r\n  left: -75px;\r\n}"
 
 /***/ },
 /* 855 */
@@ -78468,7 +78475,7 @@ module.exports = ""
 /* 860 */
 /***/ function(module, exports) {
 
-module.exports = ".search-box {\r\n    text-align: center;\r\n}\r\n\r\n.search-button {\r\n    font-size: 36px; \r\n}\r\n\r\n.material-icons {\r\n    color: #005BBB;\r\n    \r\n}\r\n\r\n.button md-icon-button {\r\n    padding: 2px, 2px, 2px, 2px;\r\n}\r\n\r\n"
+module.exports = ".search-box {\r\n    text-align: center;\r\n    padding: 2em;\r\n}\r\n\r\n.search-button {\r\n    font-size: 36px; \r\n}\r\n\r\n.material-icons {\r\n    color: #005BBB;\r\n    \r\n}\r\n\r\n.button md-icon-button {\r\n    padding: 2px, 2px, 2px, 2px;\r\n}\r\n\r\n"
 
 /***/ },
 /* 861 */
@@ -78498,25 +78505,25 @@ module.exports = "<div class=\"col-md-6\">\r\n\t<div class=\"card card-block\">\
 /* 865 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-md-6\">\r\n\t<div class=\"card card-block\">\r\n\t\t<h4 class=\"card-title\">Sign In</h4>\r\n\r\n\t\t<form #signInForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"formGroupExampleInput\">Email</label>\r\n\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_signInData.email\"\r\n\t\t\t\t\tname=\"email\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"formGroupExampleInput\">Password</label>\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_signInData.password\"\r\n\t\t\t\t\tname=\"password\">\r\n\t\t\t</div>\r\n\t\t\t<button\r\n\t\t\t\ttype=\"submit\"\r\n\t\t\t\tclass=\"btn btn-primary\"\r\n\t\t\t\t[disabled]=\"!signInForm.form.valid\">Sign In</button>\r\n\t\t</form>\r\n\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"col-md-6\">\r\n\t<div class=\"card card-block\">\r\n\t\t<h4>Sign In</h4>\r\n\r\n\t\t<form #signInForm=\"ngForm\" (ngSubmit)=\"onSubmit()\">\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"formGroupExampleInput\">Email</label>\r\n\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_signInData.email\"\r\n\t\t\t\t\tname=\"email\">\r\n\t\t\t</div>\r\n\t\t\t<div class=\"form-group\">\r\n\t\t\t\t<label for=\"formGroupExampleInput\">Password</label>\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_signInData.password\"\r\n\t\t\t\t\tname=\"password\">\r\n\t\t\t</div>\r\n\t\t\t<button\r\n\t\t\t\ttype=\"submit\"\r\n\t\t\t\tclass=\"btn btn-primary\"\r\n\t\t\t\t[disabled]=\"!signInForm.form.valid\">Sign In\r\n\t\t\t</button>\r\n\t\t</form>\r\n\r\n\t</div>\r\n</div>"
 
 /***/ },
 /* 866 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"card card-block card-success card-inverse\">\r\n                <h4 class=\"card-title\">Welcome, {{ _tokenService.currentUserData?.email | namePipe }} </h4>\r\n\r\n                <div class=\"row current-user\">\r\n                    <div class=\"col-md-6\">\r\n                        <p><b>Your translations:</b> {{ translations?.length }} </p>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n\r\n    <div class=\"row\">\r\n        <div class=\"col-md-12\">\r\n            <div class=\"card card-block card-success card-inverse\">\r\n                <h4 class=\"card-title\">{{ _tokenService.currentUserData?.email | namePipe }}'s Dashboard </h4>\r\n\r\n                <div class=\"row current-user\">\r\n                    <div class=\"col-md-6\">\r\n                        <p><b>Your translations:</b> {{ translations?.length }} </p>\r\n                    </div>\r\n                </div>\r\n\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
 /* 867 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\" style=\"text-align:center;\">\r\n    <h2>Welcome!</h2>\r\n\r\n    <h4>Continue your language learning journey by registering for an account below.</h4>\r\n\r\n    <a routerLink=\"/new_user\" routerLinkActive=\"active\">\r\n        <button md-button color=\"primary\" width=\"50%\">\r\n            Register\r\n        </button>\r\n    </a>\r\n</div>"
+module.exports = "<div *ngIf=\"!_tokenService.currentAuthData\" class=\"container\" style=\"text-align:center;\">\r\n    <h2>Welcome!</h2>\r\n\r\n    <h4>Continue your language learning journey by registering for an account below.</h4>\r\n\r\n    <a routerLink=\"/new_user\" routerLinkActive=\"active\">\r\n        <button md-button color=\"primary\" width=\"50%\">\r\n            Register\r\n        </button>\r\n    </a>\r\n</div>\r\n\r\n<div *ngIf=\"_tokenService.currentAuthData\" class=\"container\" style=\"text-align:center;\">\r\n    <h2>Welcome back, {{ _tokenService.currentUserData.email }}</h2>\r\n</div>"
 
 /***/ },
 /* 868 */
 /***/ function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"../assets/slova_text_yellow_logo.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Sign Up</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" (click)=\"openUserSettings()\">Settings</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
+module.exports = "<md-toolbar class=\"white\">\r\n    <span>\r\n      <img class=\"title\" src=\"../assets/slova_text_logo.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"primary\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Sign Up</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" (click)=\"openUserSettings()\">Settings</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
 
 /***/ },
 /* 869 */
@@ -78552,7 +78559,7 @@ module.exports = "<p>\r\n  tests works!\r\n</p>\r\n"
 /* 874 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"search-box\">\r\n    <form #searchForm='ngForm' (ngSubmit)=\"translationSearch(searchForm.value)\"  novalidate>\r\n        <div class=\"form-group\">\r\n            <label for=\"searchInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Add word\"\r\n                name=\"search\"\r\n                #search='ngModel'\r\n                [(ngModel)]=\"search.search\"\r\n            ></md-input>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"langInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Lanuage (e.g. 'en')\"\r\n                name=\"target_lang\"\r\n                #target_lang='ngModel'\r\n                [(ngModel)]=\"search.target_lang\"\r\n            ></md-input>\r\n        </div>\r\n        <button md-icon-button type=\"submit\" class=\"search-button\">\r\n            <md-icon class=\"material-icons\">youtube_searched_for</md-icon>\r\n        </button>\r\n    </form>\r\n    <br>\r\n    <div *ngIf=\"yandexTranslation\">\r\n        <h4>{{ yandexTranslation._body }}</h4>\r\n        <button md-icon-button (click)=\"saveTranslation()\">\r\n            <md-icon class=\"material-icons\">add_circle</md-icon>\r\n        </button>\r\n        <button md-icon-button (click)=\"cancelTranslation()\">\r\n            <md-icon class=\"material-icons\" color=\"accent\">cancel</md-icon>\r\n        </button>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"search-box\">\r\n    <form #searchForm='ngForm' (ngSubmit)=\"translationSearch(searchForm.value)\"  novalidate>\r\n        <div class=\"form-group\">\r\n            <label for=\"searchInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Search\"\r\n                name=\"search\"\r\n                #search='ngModel'\r\n                [(ngModel)]=\"search.search\"\r\n            ></md-input>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label for=\"langInput\"></label>\r\n            <md-input type=\"text\"\r\n                placeholder=\"Lanuage (e.g. 'en')\"\r\n                name=\"target_lang\"\r\n                #target_lang='ngModel'\r\n                [(ngModel)]=\"search.target_lang\"\r\n            ></md-input>\r\n        </div>\r\n        <button md-icon-button type=\"submit\" class=\"search-button\">\r\n            <md-icon class=\"material-icons\">youtube_searched_for</md-icon>\r\n        </button>\r\n    </form>\r\n    <br>\r\n    <div *ngIf=\"yandexTranslation\">\r\n        <h4>{{ yandexTranslation._body }}</h4>\r\n        <button md-icon-button (click)=\"saveTranslation()\">\r\n            <md-icon class=\"material-icons\">add_circle</md-icon>\r\n        </button>\r\n        <button md-icon-button (click)=\"cancelTranslation()\">\r\n            <md-icon class=\"material-icons\" color=\"accent\">cancel</md-icon>\r\n        </button>\r\n    </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ },
 /* 875 */
