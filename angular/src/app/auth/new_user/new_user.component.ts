@@ -35,7 +35,6 @@ export class NewUserComponent {
   onSubmit() {
         console.log(this._registerData);
         this._output = null;
-        this.
 
         this._tokenService.registerAccount(this._registerData).subscribe(
             res => {

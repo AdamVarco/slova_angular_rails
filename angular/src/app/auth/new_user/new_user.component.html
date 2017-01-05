@@ -2,6 +2,8 @@
 	<div class="card card-block">
 		<h4 class="card-title">Register</h4>
 
+		<div *ngIf="this._output" class="alert alert-danger">There was a problem registering your account. Please try again.</div>
+
 		<form #registerForm="ngForm" (ngSubmit)="onSubmit()">
 			<div class="form-group">
 				<label for="formGroupExampleInput">Email</label>

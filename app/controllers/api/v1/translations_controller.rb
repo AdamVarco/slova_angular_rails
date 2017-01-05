@@ -1,4 +1,5 @@
 class API::V1::TranslationsController < ApplicationController
+  # before_action :authenticate_user
 
   # GET /translations
   def index
@@ -30,21 +31,21 @@ class API::V1::TranslationsController < ApplicationController
   def create
     native_word = params[:native]
     target_word = params[:target]
-    user_id = params[:user_id]
+    user_id     = params[:user_id]
 
     translation = Translation.new({native: native_word, target: target_word, user_id: user_id})
 
     if !Translation.where(:native => translation.native).blank?
       render json: {
         status: 500,
-        errors: list.errors
+        errors: errors
       }
     elsif translation.save
       render json: translation
     else
       render json: {
         status: 500,
-        errors: list.errors
+        errors: errors
       }
     end
   end

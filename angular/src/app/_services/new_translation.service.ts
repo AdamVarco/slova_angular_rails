@@ -23,6 +23,7 @@ export class NewTranslationService {
         let yandexTranslation = this.http.post(this.searchTranslationUrl, JSON.stringify(this.userSearch), {
             headers: headers}).map((response: Response) => response)
             .catch(this.handleError);
+            console.log(yandexTranslation);
             return yandexTranslation;
     }
 

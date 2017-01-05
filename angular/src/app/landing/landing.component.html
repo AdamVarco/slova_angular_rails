@@ -11,5 +11,5 @@
 </div>
 
 <div *ngIf="_tokenService.currentAuthData" class="container" style="text-align:center;">
-    <h2>Welcome back, {{ _tokenService.currentUserData.email }}</h2>
+    <h2>Welcome back, {{ _tokenService.currentUserData?.email }}</h2>
 </div>
