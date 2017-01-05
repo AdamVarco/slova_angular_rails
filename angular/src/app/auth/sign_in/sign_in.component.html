@@ -1,6 +1,8 @@
 <div class="col-md-6">
 	<div class="card card-block">
-		<h4 class="card-title">Sign In</h4>
+		<h4>Sign In</h4>
+
+		<div *ngIf="this._output" class="alert alert-danger">Invalid login credentials. Please try again.</div>
 
 		<form #signInForm="ngForm" (ngSubmit)="onSubmit()">
 			<div class="form-group">
@@ -24,7 +26,8 @@
 			<button
 				type="submit"
 				class="btn btn-primary"
-				[disabled]="!signInForm.form.valid">Sign In</button>
+				[disabled]="!signInForm.form.valid">Sign In
+			</button>
 		</form>
 
 	</div>

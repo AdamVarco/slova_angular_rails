@@ -1,4 +1,4 @@
-<div class="container" style="text-align:center;">
+<div *ngIf="!_tokenService.currentAuthData" class="container" style="text-align:center;">
     <h2>Welcome!</h2>
 
     <h4>Continue your language learning journey by registering for an account below.</h4>
@@ -8,4 +8,8 @@
             Register
         </button>
     </a>
+</div>
+
+<div *ngIf="_tokenService.currentAuthData" class="container" style="text-align:center;">
+    <h2>Welcome back, {{ _tokenService.currentUserData?.email }}</h2>
 </div>

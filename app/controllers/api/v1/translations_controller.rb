@@ -3,7 +3,11 @@ class API::V1::TranslationsController < ApplicationController
 
   # GET /translations
   def index
-    translations = Translation.order('created_at DESC')
+    if current_user
+      translations = Translation.where(user_id: current_user.id).order('created_at DESC')
+    else
+      translations = Translation.order('created_at DESC')
+    end
 
     render json: translations
   end
@@ -13,7 +17,7 @@ class API::V1::TranslationsController < ApplicationController
     already_in_db = Translation.find_by(native: params[:search])
 
     if already_in_db
-      warning = "You already saved this translation!"
+      warning = "You have already saved this translation."
       render json: warning
     else
       pending_translation = TranslationService.new({search: params[:search], target_lang: params[:target_lang]}).search
@@ -27,15 +31,21 @@ class API::V1::TranslationsController < ApplicationController
   def create
     native_word = params[:native]
     target_word = params[:target]
+    user_id     = params[:user_id]
 
-    translation = Translation.new({native: native_word, target: target_word})
+    translation = Translation.new({native: native_word, target: target_word, user_id: user_id})
 
-    if translation.save
+    if !Translation.where(:native => translation.native).blank?
+      render json: {
+        status: 500,
+        errors: errors
+      }
+    elsif translation.save
       render json: translation
     else
       render json: {
         status: 500,
-        errors: list.errors
+        errors: errors
       }
     end
   end

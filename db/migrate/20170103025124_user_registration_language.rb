@@ -1,5 +1,5 @@
 class UserRegistrationLanguage < ActiveRecord::Migration[5.0]
   def change
-    add_column :users, :language, :string, null: false, default: "ru"
+    add_column :users, :target_lang, :string
   end
 end

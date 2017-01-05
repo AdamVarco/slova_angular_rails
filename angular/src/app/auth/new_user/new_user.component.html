@@ -2,6 +2,8 @@
 	<div class="card card-block">
 		<h4 class="card-title">Register</h4>
 
+		<div *ngIf="this._output" class="alert alert-danger">There was a problem registering your account. Please try again.</div>
+
 		<form #registerForm="ngForm" (ngSubmit)="onSubmit()">
 			<div class="form-group">
 				<label for="formGroupExampleInput">Email</label>
@@ -11,6 +13,16 @@
 					required
 					[(ngModel)]="_registerData.email"
 					name="email">
+			</div>
+			<div class="form-group">
+				<label for="formGroupExampleInput">Target Language</label>
+				<select name="target_lang"
+					class="form-control"
+					placeholder="Target Language"
+					required
+					[(ngModel)]="_registerData.target_lang">
+					<option *ngFor="let lang of langs" [ngValue]="lang.value">{{ lang.display }}</option>
+				</select>
 			</div>
 			<div class="form-group">
 				<label for="formGroupExampleInput">Password</label>

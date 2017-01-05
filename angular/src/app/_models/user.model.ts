@@ -1,8 +1,5 @@
 export class User {
     email: string;
-    id: number;
-    image: any;
-    name: any;
-    nickname: any;
-    uid: string;
+    native_lang: string;
+    password: string;
 }

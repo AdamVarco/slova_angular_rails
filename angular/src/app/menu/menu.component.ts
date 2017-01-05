@@ -11,7 +11,7 @@ import { User } from '../_models/user.model';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-  public currentUser: User;
+  public currentUser: any;
 
   constructor(private router: Router, private _tokenService: Angular2TokenService) { }
 

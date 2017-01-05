@@ -3,13 +3,14 @@ import { Http, Response, Headers, RequestOptions} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
+import { Angular2TokenService } from 'angular2-token';
 
 @Injectable()
 export class NewTranslationService {
 
     public userSearch: string;
 
-    constructor( private http: Http ) { }
+    constructor( private http: Http, private _tokenService: Angular2TokenService ) { }
 
     private searchTranslationUrl = '/api/v1/translations/search';
     private createTranslationUrl = '/api/v1/translations';
@@ -22,14 +23,15 @@ export class NewTranslationService {
         let yandexTranslation = this.http.post(this.searchTranslationUrl, JSON.stringify(this.userSearch), {
             headers: headers}).map((response: Response) => response)
             .catch(this.handleError);
+            console.log(yandexTranslation);
             return yandexTranslation;
     }
 
     public saveTranslation(yandexTranslation) {
-        let params = JSON.stringify({native: this.userSearch["search"], target: yandexTranslation["_body"]});
+        let params = JSON.stringify({native: this.userSearch["search"], target: yandexTranslation["_body"], user_id: this._tokenService.currentUserData.id});
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
-
+        
         return this.http.post(this.createTranslationUrl, params, {
             headers: headers}).map((response: Response) => response)
             .catch(this.handleError);

@@ -21,34 +21,28 @@ RSpec.describe API::V1::TranslationsController, type: :controller do
       end
     end
 
-    # describe "POST search" do
-    #   context "with valid params" do
-    #     let(:valid_search) { search: "Apple", target_lang: "ru" }
-    #
-    #     it "creates a new search" do
-    #       post :search, params: { valid_search }
-    #
-    #       expect(valid_search.search).to be_truthy
-    #     end
-    #   end
-    #
-    #   context "with invalid params" do
-    #     let(:empty_search_text) { { search: "", target_lang: "ru" } }
-    #     let(:invalid_target_lang) { { search: "Apple", target_lang: "xx" } }
-    #
-    #     it "does not allow empty searches" do
-    #       post :search, params: { empty_search_text }
-    #
-    #       expect(empty_search_text.search).to raise_error
-    #     end
-    #
-    #     it "does not allow invalid target languages" do
-    #       post :search, params: { invalid_target_lang }
-    #
-    #       expect(invalid_target_lang.search).to raise_error
-    #     end
-    #   end
-    # end
+    describe "POST search" do
+      context "with valid params" do
+        let(:valid_search) {TranslationService.new({search: "Apple", target_lang: "ru"})}
+
+        it "creates a new pending search" do
+
+          expect(valid_search.search).to be_truthy
+        end
+      end
+    end
+
+    describe "POST create" do
+      context "duplicate translations" do
+        it "does not allow duplicate translations" do
+          first_translation = Translation.new({native: "Apple", target: "Яблоко"})
+          duplicate_translation = Translation.new({native: "Apple", target: "Яблоко"})
+          first_translation.save
+
+          expect(duplicate_translation.save).to be_instance_of(error)
+        end
+      end
+    end
 
     describe "DELETE destroy" do
       it "successfully deletes requested translation" do

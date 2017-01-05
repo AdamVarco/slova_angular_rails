@@ -3,11 +3,14 @@
         <div class="form-group">
             <label for="searchInput"></label>
             <md-input type="text"
-                placeholder="Add word"
+                placeholder="Search"
                 name="search"
                 #search='ngModel'
-                [(ngModel)]="search.search"
-            ></md-input>
+                required
+                minlength="2"
+                maxlening="49"
+                [(ngModel)]="search.search">
+            </md-input>
         </div>
         <div class="form-group">
             <label for="langInput"></label>
@@ -15,20 +18,23 @@
                 placeholder="Lanuage (e.g. 'en')"
                 name="target_lang"
                 #target_lang='ngModel'
+                required
+                minlength="2"
+                maxlength="2"
                 [(ngModel)]="search.target_lang"
             ></md-input>
         </div>
-        <button md-icon-button type="submit" class="search-button">
+        <button md-icon-button type="submit" class="search-button" [disabled]="!searchForm.form.valid">
             <md-icon class="material-icons">youtube_searched_for</md-icon>
         </button>
     </form>
     <br>
     <div *ngIf="yandexTranslation">
         <h4>{{ yandexTranslation._body }}</h4>
-        <button md-icon-button (click)="saveTranslation()">
+        <button md-icon-button (click)="saveTranslation(); searchForm.reset()">
             <md-icon class="material-icons">add_circle</md-icon>
         </button>
-        <button md-icon-button (click)="cancelTranslation()">
+        <button md-icon-button (click)="cancelTranslation(); searchForm.reset()">
             <md-icon class="material-icons" color="accent">cancel</md-icon>
         </button>
     </div>
