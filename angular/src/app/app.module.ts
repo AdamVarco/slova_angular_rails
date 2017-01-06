@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
-import { Angular2TokenService, A2tUiModule } from 'angular2-token';
+import { Angular2TokenService } from 'angular2-token';
 
 // Adds functionality to Observable query objects
 import 'rxjs/add/operator/map';
@@ -45,8 +45,7 @@ import { UserService } from './_services/user.service';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    AuthModule,
-    A2tUiModule
+    AuthModule
   ],
   exports: [ MaterialModule ],
   declarations: [

@@ -22,7 +22,7 @@ export class NewTranslationComponent {
 
     translationSearch(query: any) {
 
-        this.newTranslationService.getTranslation(query)
+        this.newTranslationService.searchTranslation(query)
             .subscribe(
                 data => {
                     this.yandexTranslation = data;

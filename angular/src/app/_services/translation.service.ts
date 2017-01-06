@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+import { Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
 import { Angular2TokenService } from 'angular2-token';
@@ -9,25 +9,18 @@ import { Translation } from '../_models/translation.model';
 @Injectable()
 export class TranslationService {
 
-    private translationsUrl = '/api/v1/translations';
-    // private headers
+    constructor( private _tokenService: Angular2TokenService ) {}
 
-    constructor( private http: Http, private _tokenService: Angular2TokenService ) {}
+    private translationsUrl = '/api/v1/translations';  
 
-    getTranslations() {
-
+    public getTranslations() {
       return this._tokenService.get(this.translationsUrl)
                           .map(res => res.json())
-      ;
-      
-
-        // return this.http.get(this.translationsUrl)
-        //                 .map((response: Response) => <Translation[]>response.json())
-        //                 .catch(this.handleError);
+                          .catch(this.handleError);
     }
 
-    deleteTranslation(translation: Translation) {
-      return this.http.delete(this.translationsUrl + "/" + translation.id)
+    public deleteTranslation(translation: Translation) {
+      return this._tokenService.delete(this.translationsUrl + "/" + translation.id)
                   .catch(this.handleError);
     }
 

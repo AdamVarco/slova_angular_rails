@@ -6,7 +6,7 @@ import { Angular2TokenService, SignInData } from 'angular2-token';
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign_in.component.html',
-  styleUrls: ['./sign_in.component.css']
+  styleUrls: ['../auth.module.css']
 })
 export class SignInComponent {
   
@@ -15,7 +15,7 @@ export class SignInComponent {
 
   constructor(private _tokenService: Angular2TokenService, private router: Router) { }
 
-  onSubmit() {
+  signIn() {
 
         this._output = null;
 
@@ -29,6 +29,10 @@ export class SignInComponent {
                 this._output        = error;
             }
         );
+    }
+
+    resetPassword() {
+        this.router.navigate(['reset_password']);
     }
 
 }

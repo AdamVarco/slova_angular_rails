@@ -11,6 +11,7 @@ import { TestsComponent } from './tests/tests.component';
 import { SettingsComponent } from './settings/settings.component';
 import { NewUserComponent } from './auth/new_user/new_user.component';
 import { SignInComponent } from './auth/sign_in/sign_in.component';
+import { ResetPasswordComponent } from './auth/reset_password/reset_password.component';
 
 const appRoutes: Routes = [
     { 
@@ -48,6 +49,10 @@ const appRoutes: Routes = [
      { 
         path: 'sign_in', 
         component: SignInComponent
+     },
+     { 
+        path: 'reset_password', 
+        component: ResetPasswordComponent
      },
     { 
         path: '', 

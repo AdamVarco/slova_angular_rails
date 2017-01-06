@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { Angular2TokenService } from 'angular2-token';
+import { Angular2TokenService, A2tUiModule } from 'angular2-token';
 
 import { NewUserComponent } from './new_user/new_user.component';
 import { SignInComponent } from './sign_in/sign_in.component';
+import { ResetPasswordComponent } from './reset_password/reset_password.component';
 
 @NgModule({
     imports: [
@@ -17,10 +18,12 @@ import { SignInComponent } from './sign_in/sign_in.component';
     ],
     declarations: [
         NewUserComponent,
-        SignInComponent
+        SignInComponent,
+        ResetPasswordComponent
     ],
     providers: [
-        Angular2TokenService
+        Angular2TokenService,
+        A2tUiModule
     ]
 })
 export class AuthModule { }

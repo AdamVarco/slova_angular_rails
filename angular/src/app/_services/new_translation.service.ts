@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions} from '@angular/http';
+import { Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
@@ -8,33 +8,28 @@ import { Angular2TokenService } from 'angular2-token';
 @Injectable()
 export class NewTranslationService {
 
-    public userSearch: string;
+    constructor( private _tokenService: Angular2TokenService ) { }
 
-    constructor( private http: Http, private _tokenService: Angular2TokenService ) { }
-
+    private userSearch: string;
     private searchTranslationUrl = '/api/v1/translations/search';
     private createTranslationUrl = '/api/v1/translations';
 
-    public getTranslation(search) {
+    public searchTranslation(search) {
+        let params = JSON.stringify(search)
         this.userSearch = search;
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
 
-        let yandexTranslation = this.http.post(this.searchTranslationUrl, JSON.stringify(this.userSearch), {
-            headers: headers}).map((response: Response) => response)
-            .catch(this.handleError);
-            console.log(yandexTranslation);
-            return yandexTranslation;
+        return this._tokenService.post(this.searchTranslationUrl, params)
+                                .map(res => res)
+                                .catch(this.handleError);
     }
 
     public saveTranslation(yandexTranslation) {
         let params = JSON.stringify({native: this.userSearch["search"], target: yandexTranslation["_body"], user_id: this._tokenService.currentUserData.id});
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
         
-        return this.http.post(this.createTranslationUrl, params, {
-            headers: headers}).map((response: Response) => response)
-            .catch(this.handleError);
+        return this._tokenService.post(this.createTranslationUrl, params)
+                                .map(res => res)
+                                .catch(this.handleError);
+
     }
 
 

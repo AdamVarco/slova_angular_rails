@@ -8,6 +8,7 @@ export class Translation {
     public created_at?: string,
     public times_correct?: number,
     public times_incorrect?: number,
-    public updated_at?: string
+    public updated_at?: string,
+    public user_id?: number
   ) { }
 }

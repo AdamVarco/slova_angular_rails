@@ -1,3 +1,21 @@
-<p>
-  settings works!
-</p>
+<div>
+  <h4>What language are you trying to learn?</h4>
+
+  <form #saveLanguageForm="ngForm" (ngSubmit)="saveLanguage()">
+    <div class="form-group">
+				<label for="formGroupExampleInput">Target Language</label>
+				<select name="target_lang"
+					class="form-control"
+					placeholder="Target Language"
+					required>
+					<option *ngFor="let lang of langs" [ngValue]="lang.value">{{ lang.display }}</option>
+				</select>
+			</div>
+      <button
+				type="submit"
+				class="btn btn-primary"
+				[disabled]="!saveLanguageForm.form.valid">Save Language
+			</button>
+    </form>
+</div>
+

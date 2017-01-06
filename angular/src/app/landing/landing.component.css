@@ -1,7 +1,18 @@
-container {
-    text-align: center;
+
+img {
+    width:75%;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
-h2 {
+h3 {
     text-align: center;
 }
+button {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+}
+
+

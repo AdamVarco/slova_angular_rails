@@ -1,10 +1,10 @@
-<div class="col-md-6">
+<div class="col-md-6 col-centered">
 	<div class="card card-block">
 		<h4>Sign In</h4>
 
 		<div *ngIf="this._output" class="alert alert-danger">Invalid login credentials. Please try again.</div>
 
-		<form #signInForm="ngForm" (ngSubmit)="onSubmit()">
+		<form #signInForm="ngForm" (ngSubmit)="signIn()">
 			<div class="form-group">
 				<label for="formGroupExampleInput">Email</label>
 				<input type="text"
@@ -27,6 +27,10 @@
 				type="submit"
 				class="btn btn-primary"
 				[disabled]="!signInForm.form.valid">Sign In
+			</button>
+			<button (click)="resetPassword()"
+				type="button"
+				class="btn btn-link">Forgotten Password?
 			</button>
 		</form>
 
