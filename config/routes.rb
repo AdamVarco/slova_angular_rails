@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
     namespace :api do
       namespace :v1 do
-        match 'users/current', to: 'users#current', via: :get
+        resources :users, only: [:index, :update]
         resources :translations do
           collection do
             post :search

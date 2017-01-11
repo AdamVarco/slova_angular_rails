@@ -8,7 +8,6 @@ import { Translation } from '../_models/translation.model';
 
 @Injectable()
 export class TranslationService {
-
     constructor( private _tokenService: Angular2TokenService ) {}
 
     private translationsUrl = '/api/v1/translations';  
@@ -26,15 +25,15 @@ export class TranslationService {
 
     private handleError (error: Response | any) {
    
-    let errMsg: string;
-    if (error instanceof Response) {
-      const body = error || '';
-      const err = JSON.stringify(body);
-      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
-    } else {
-      errMsg = error.message ? error.message : error.toString();
+      let errMsg: string;
+      if (error instanceof Response) {
+        const body = error || '';
+        const err = JSON.stringify(body);
+        errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+      } else {
+        errMsg = error.message ? error.message : error.toString();
+      }
+      console.error(errMsg);
+      return Observable.throw(errMsg);
     }
-    console.error(errMsg);
-    return Observable.throw(errMsg);
-  }
 }

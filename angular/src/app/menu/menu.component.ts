@@ -19,9 +19,4 @@ export class MenuComponent {
     this._tokenService.signOut();
   }
 
-  openUserSettings() {
-    this.currentUser = this._tokenService.currentUserData;
-    console.log(this.currentUser);
-  }
-
 }

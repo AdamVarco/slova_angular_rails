@@ -16,7 +16,6 @@ export class SignInComponent {
   constructor(private _tokenService: Angular2TokenService, private router: Router) { }
 
   signIn() {
-
         this._output = null;
 
         this._tokenService.signIn(this._signInData).subscribe(

@@ -1,5 +1,4 @@
 class API::V1::TranslationsController < ApplicationController
-  # before_action :authenticate_user
 
   # GET /translations
   def index
@@ -18,7 +17,7 @@ class API::V1::TranslationsController < ApplicationController
       warning = "You have already saved this translation."
       render json: warning
     else
-      pending_translation = TranslationService.new({search: params[:search], target_lang: params[:target_lang]}).search
+      pending_translation = TranslationService.new({search: params[:search], native_lang: current_user.native_lang, target_lang: current_user.target_lang}).search
 
         render json: pending_translation
     end

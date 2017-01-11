@@ -11,6 +11,8 @@
 					class="form-control"
 					placeholder="Email"
 					required
+					minlength="3"
+                	maxlength="25"
 					[(ngModel)]="_registerData.email"
 					name="email">
 			</div>
@@ -19,6 +21,8 @@
 				<input type="password"
 					class="form-control"
 					placeholder="Password"
+					minlength="8"
+					maxlength="25"
 					required
 					[(ngModel)]="_registerData.password"
 					name="password">
