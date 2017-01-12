@@ -15,9 +15,9 @@ import { User } from '../_models/user.model';
 export class SettingsComponent implements OnInit {
   constructor(private _tokenService: Angular2TokenService, private _userService: UserService) { }
 
-  public currentUser: any;
+  public currentUser: any = {};
   public errorMessage: string;
-
+  public saveSuccess: boolean;
   public userdata: any;
 
   public langs = [
@@ -37,21 +37,19 @@ export class SettingsComponent implements OnInit {
       { value: 'uk', display: 'Ukrainian' }
   ]
 
-  ngOnInit(): void {
-    this.currentUser = this._userService.setUser()
+  ngOnInit() {
+    return this._userService.setUser().subscribe(res => this.currentUser = res);
   }
 
   saveUserSettings(settings) {
       this._userService.saveUserSettings(settings)
-              .subscribe(
-                  data => {
-                      this.userdata = data;
-                  },
-                  error => {
-                      console.log("Error saving user settings");
-                      return Observable.throw(error);
+              .subscribe((data) => {
+                  if (data) {
+                      this.saveSuccess = true;
+                  } else {
+                      this.saveSuccess = false;
                   }
-              );
+              });
     }
 
 }

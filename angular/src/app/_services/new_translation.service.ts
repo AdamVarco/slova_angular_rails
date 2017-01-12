@@ -7,7 +7,9 @@ import { Angular2TokenService } from 'angular2-token';
 
 @Injectable()
 export class NewTranslationService {
-    constructor( private _tokenService: Angular2TokenService ) { }
+    constructor( private _tokenService: Angular2TokenService ) {
+        this._tokenService.init();
+     }
 
     private userSearch: string;
     private searchTranslationUrl = '/api/v1/translations/search';

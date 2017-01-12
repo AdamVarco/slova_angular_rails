@@ -16,9 +16,7 @@ export class NewTranslationComponent {
     public yandexTranslation: {};
     public newTranslation: Translation;
 
-    constructor(private newTranslationService: NewTranslationService) {
-        
-    }
+    constructor(private newTranslationService: NewTranslationService) { }
 
     translationSearch(query: any) {
 
@@ -30,7 +28,6 @@ export class NewTranslationComponent {
                 error => { console.log("Error getting translation");
                     return Observable.throw(error);
                 },
-                // () => this.yandexTranslation
             );  
     }
     

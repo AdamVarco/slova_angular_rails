@@ -1,11 +1,9 @@
 <div class="col-md-6 col-centered">
 	<div class="card card-block">
 		<h4 class="card-title" style="text-align:center">Your account</h4>
-			
-			<div *ngIf="this.currentUser">
-				Native Language: {{this.currentUser.native_lang }}
+			<div class="alert alert-success" *ngIf="saveSuccess">
+    			<strong>Success!</strong>
 			</div>
-
 			<form #userSettingsForm="ngForm" (ngSubmit)="saveUserSettings(userSettingsForm.value)">
 				<div class="form-group">
 						<label for="formGroupExampleInput">What is your NATIVE language?</label>
@@ -16,10 +14,6 @@
 							required>
 							<option *ngFor="let lang of langs" [(ngValue)]="lang.value">{{ lang.display }}</option>
 						</select>
-				</div>
-
-				<div *ngIf="this.currentUser">
-					Currently Learning: {{this.currentUser.target_lang }}
 				</div>
 
 				<div class="form-group">

@@ -17,7 +17,6 @@ export class NewUserComponent {
   constructor(private _tokenService: Angular2TokenService, private router: Router) {}
 
   registerUser() {
-        console.log(this._registerData);
         this._output = null;
 
         this._tokenService.registerAccount(this._registerData).subscribe(

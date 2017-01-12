@@ -6,7 +6,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 
 export class CustomPipe implements PipeTransform {
   transform(value: any) {
-    if (value) {
+    if (value) { 
       return value.indexOf('@') > -1 ?  value.split('@')[0] : value;
     }
   }
