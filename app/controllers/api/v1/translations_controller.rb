@@ -1,4 +1,5 @@
 class API::V1::TranslationsController < ApplicationController
+  before_action :authenticate_user!
 
   # GET /translations
   def index
@@ -9,7 +10,7 @@ class API::V1::TranslationsController < ApplicationController
     render json: translations
   end
 
-  # POST /search_translations
+  # POST /translations/search
   def search
     already_in_db = Translation.where(:user_id => current_user.id, :native => params[:search])
 
@@ -19,7 +20,7 @@ class API::V1::TranslationsController < ApplicationController
     else
       pending_translation = TranslationService.new({search: params[:search], native_lang: current_user.native_lang, target_lang: current_user.target_lang}).search
 
-        render json: pending_translation
+      render json: pending_translation
     end
   end
 
@@ -33,20 +34,18 @@ class API::V1::TranslationsController < ApplicationController
 
     if !Translation.where(:native => translation.native, :user_id => translation.user_id).blank?
       render json: {
-        status: 500,
-        errors: errors
+        status: 500
       }
     elsif translation.save
       render json: translation
     else
       render json: {
-        status: 500,
-        errors: errors
+        status: 500
       }
     end
   end
 
-  # DELETE /translations/1
+  # DELETE /translations/:id
   def destroy
     translation = Translation.find(params[:id])
 

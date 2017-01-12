@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Angular2TokenService, UpdatePasswordData } from 'angular2-token';
+import { UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-password-update',
@@ -13,12 +14,12 @@ export class PasswordUpdateComponent {
   private _updatePasswordData: UpdatePasswordData = <UpdatePasswordData>{};
   private _output: any;
 
-  constructor(private _tokenService: Angular2TokenService, private _router: Router) { }
+  constructor(private _tokenService: Angular2TokenService, private _userService: UserService, private _router: Router) { }
 
   updatePassword() {
     this._output = null;
 
-    this._tokenService.updatePassword(this._updatePasswordData).subscribe(
+    this._userService.updatePassword(this._updatePasswordData).subscribe(
         res => {
                 this._updatePasswordData    = <UpdatePasswordData>{};
                 this._output        = res;

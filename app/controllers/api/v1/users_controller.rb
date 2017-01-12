@@ -1,6 +1,7 @@
 class API::V1::UsersController < ApplicationController
   before_action :authenticate_user!
 
+    # GET /users
     def index
       @user = current_user
 
@@ -11,6 +12,7 @@ class API::V1::UsersController < ApplicationController
       end
     end
 
+    # PUT /users/update
     def update
       native_lang = params[:native_lang]
       target_lang = params[:target_lang]

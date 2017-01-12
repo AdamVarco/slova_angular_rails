@@ -50435,6 +50435,7 @@ var UserService = (function () {
         this.router = router;
         this.setUserUrl = '/api/v1/users';
         this.saveSettingsUrl = 'api/v1/users/update';
+        this.updatePasswordUrl = 'auth/password';
     }
     UserService.prototype.signOut = function () {
         var _this = this;
@@ -50449,6 +50450,12 @@ var UserService = (function () {
     UserService.prototype.saveUserSettings = function (settings) {
         var params = JSON.stringify({ native_lang: settings["native_lang"], target_lang: settings["target_lang"] });
         return this._tokenService.put(this.saveSettingsUrl, params)
+            .map(function (res) { return res.json(); })
+            .catch(this.handleError);
+    };
+    UserService.prototype.updatePassword = function (passwordData) {
+        var params = JSON.stringify({ password: passwordData["password"], password_confirmation: passwordData["password_confirmation"] });
+        return this._tokenService.put(this.updatePasswordUrl, params)
             .map(function (res) { return res.json(); })
             .catch(this.handleError);
     };
@@ -50687,6 +50694,7 @@ var NewUserComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__(427);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PasswordUpdateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -50700,16 +50708,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PasswordUpdateComponent = (function () {
-    function PasswordUpdateComponent(_tokenService, _router) {
+    function PasswordUpdateComponent(_tokenService, _userService, _router) {
         this._tokenService = _tokenService;
+        this._userService = _userService;
         this._router = _router;
         this._updatePasswordData = {};
     }
     PasswordUpdateComponent.prototype.updatePassword = function () {
         var _this = this;
         this._output = null;
-        this._tokenService.updatePassword(this._updatePasswordData).subscribe(function (res) {
+        this._userService.updatePassword(this._updatePasswordData).subscribe(function (res) {
             _this._updatePasswordData = {};
             _this._output = res;
             _this._router.navigate(['/sign_in']);
@@ -50724,10 +50734,10 @@ var PasswordUpdateComponent = (function () {
             template: __webpack_require__(866),
             styles: [__webpack_require__(174)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _c) || Object])
     ], PasswordUpdateComponent);
     return PasswordUpdateComponent;
-    var _a, _b;
+    var _a, _b, _c;
 }());
 
 

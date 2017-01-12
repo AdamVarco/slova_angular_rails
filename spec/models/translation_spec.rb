@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Translation, type: :model do
+  let(:user) { create(:user) }
+  let(:translation) { create(:translation, user: user) }
 
-  let (:translation) { create(:translation)}
+  it { should belong_to(:user) }
 
   describe 'attributes' do
     it 'should answer to native' do

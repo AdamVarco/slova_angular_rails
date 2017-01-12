@@ -13,6 +13,7 @@ export class UserService {
     private _output: any;
     private setUserUrl = '/api/v1/users';
     private saveSettingsUrl = 'api/v1/users/update';
+    private updatePasswordUrl = 'auth/password';
 
     public signOut() {
         this._output = null;
@@ -32,6 +33,14 @@ export class UserService {
         let params = JSON.stringify({native_lang: settings["native_lang"], target_lang: settings["target_lang"]});
 
         return this._tokenService.put(this.saveSettingsUrl, params)
+                    .map((res: Response) => res.json())
+                    .catch(this.handleError);
+    }
+
+    public updatePassword(passwordData) {
+        let params = JSON.stringify({password: passwordData["password"], password_confirmation: passwordData["password_confirmation"]});
+        
+        return this._tokenService.put(this.updatePasswordUrl, params)
                     .map((res: Response) => res.json())
                     .catch(this.handleError);
     }
