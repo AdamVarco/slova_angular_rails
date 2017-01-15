@@ -1,46 +1,46 @@
-<div class="col-md-6 col-centered">
-	<div class="card card-block">
-		<h4 class="card-title">Register</h4>
+<div class="col-md-6 col-centered" style="padding-top:15px">
+	<md-card class="col-centered">
+		<md-card-title>Create your Account</md-card-title>
+		<md-card-subtitle>Continue your language-learning journey with Slova, bringing you personal and intelligent tools that will accelerate your progress in the languages you love.</md-card-subtitle>
+			<md-card-content>
+				<div *ngIf="this._output" class="alert alert-danger">There was a problem registering your account. Please try again.</div>
 
-		<div *ngIf="this._output" class="alert alert-danger">There was a problem registering your account. Please try again.</div>
-
-		<form #registerForm="ngForm" (ngSubmit)="registerUser()">
-			<div class="form-group">
-				<label for="formGroupExampleInput">Email</label>
-				<input type="text"
-					class="form-control"
-					placeholder="Email"
-					required
-					minlength="3"
-                	maxlength="25"
-					[(ngModel)]="_registerData.email"
-					name="email">
-			</div>
-			<div class="form-group">
-				<label for="formGroupExampleInput">Password</label>
-				<input type="password"
-					class="form-control"
-					placeholder="Password"
-					minlength="8"
-					maxlength="25"
-					required
-					[(ngModel)]="_registerData.password"
-					name="password">
-			</div>
-			<div class="form-group">
-				<label for="formGroupExampleInput">Password Confirmation</label>
-				<input type="password"
-					class="form-control"
-					placeholder="Password Confirmation"
-					required
-					[(ngModel)]="_registerData.passwordConfirmation"
-					name="passwordConfirmation">
-			</div>
-			<button
-				type="submit"
-				class="btn btn-primary"
-				[disabled]="!registerForm.form.valid">Register</button>
-		</form>
-
-	</div>
+				<form #registerForm="ngForm" (ngSubmit)="registerUser()">
+					<div>
+						<input type="text"
+							class="form-control"
+							placeholder="Email"
+							required
+							minlength="3"
+							maxlength="25"
+							[(ngModel)]="_registerData.email"
+							name="email">
+					</div><br>
+					<div>
+						<input type="password"
+							class="form-control"
+							placeholder="Password"
+							minlength="8"
+							maxlength="25"
+							required
+							[(ngModel)]="_registerData.password"
+							name="password">
+					</div><br>
+					<div>
+						<input type="password"
+							class="form-control"
+							placeholder="Password Confirmation"
+							required
+							[(ngModel)]="_registerData.passwordConfirmation"
+							name="passwordConfirmation">
+					</div>
+					<md-card-actions class="auth-button">
+						<button md-raised-button color="primary"
+							type="submit"
+							[disabled]="!registerForm.form.valid">Register
+						</button>
+					</md-card-actions>
+				</form>
+			</md-card-content>
+	</md-card>
 </div>

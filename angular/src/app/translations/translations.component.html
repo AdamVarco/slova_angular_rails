@@ -1,7 +1,12 @@
-<div class="container-fluid" id="search-container">
-  <md-input class="search" align="middle" placeholder="Search word" (keyup)="search(input.value)" #input></md-input>
-</div>
-
-<div class="container-fluid" id="traslation-list-container">
-  <translation-list [translations]="filteredTranslations"></translation-list>
+<div class="col-md-6 col-centered" style="padding-top:15px">
+  <md-card class="col-centered">
+    <md-card-content>
+      <div class="container-fluid" id="search-container">
+        <md-input class="search" align="middle" placeholder="Search word" (keyup)="search(input.value)" #input></md-input>
+      </div>
+      <div class="container-fluid" id="traslation-list-container">
+        <translation-list [translations]="filteredTranslations"></translation-list>
+      </div>
+    </md-card-content>
+  </md-card>
 </div>

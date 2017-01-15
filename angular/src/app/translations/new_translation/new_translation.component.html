@@ -1,31 +1,37 @@
 <div class="search-box">
-    <form #searchForm='ngForm' (ngSubmit)="translationSearch(searchForm.value)"  novalidate>
-        <div class="form-group">
-            <label for="searchInput"></label>
-            <md-input type="text"
-                placeholder="Search"
-                name="search"
-                #search='ngModel'
-                required
-                minlength="2"
-                maxlening="49"
-                [(ngModel)]="search.search">
-            </md-input>
-            <button md-icon-button type="submit" class="search-button" [disabled]="!searchForm.form.valid">
-                <md-icon class="material-icons">youtube_searched_for</md-icon>
-            </button>
-        </div>
-    </form>
-    <br>
-    <div *ngIf="yandexTranslation">
-        <h4>{{ yandexTranslation._body }}</h4>
-        <button md-icon-button (click)="saveTranslation(); searchForm.reset()">
-            <md-icon class="material-icons">add_circle</md-icon>
-        </button>
-        <button md-icon-button (click)="cancelTranslation(); searchForm.reset()">
-            <md-icon class="material-icons" color="accent">cancel</md-icon>
-        </button>
-    </div>
+    <md-card class="col-centered"  style="height:300px">
+        <md-card-subtitle style="text-align: center">Add New Word</md-card-subtitle>
+            <md-card-content>
+            <form #searchForm='ngForm' (ngSubmit)="translationSearch(searchForm.value)"  novalidate>
+                <div class="form-group">
+                    <label for="searchInput"></label>
+                    <md-input type="text"
+                        placeholder="Search"
+                        name="search"
+                        #search='ngModel'
+                        required
+                        minlength="2"
+                        maxlening="49"
+                        [(ngModel)]="search.search">
+                    </md-input>
+                    <md-card-actions class="auth-button">
+                        <button md-icon-button type="submit" class="search-button" [disabled]="!searchForm.form.valid">
+                            <md-icon class="material-icons">youtube_searched_for</md-icon>
+                        </button>
+                        <div *ngIf="yandexTranslation">
+                            <h4>{{ yandexTranslation._body }}</h4>
+                            <button md-icon-button (click)="saveTranslation(); searchForm.reset()">
+                                <md-icon class="material-icons">add_circle</md-icon>
+                            </button>
+                            <button md-icon-button (click)="cancelTranslation(); searchForm.reset()">
+                                <md-icon class="material-icons" color="accent">cancel</md-icon>
+                            </button>
+                        </div>
+                    </md-card-actions>
+                </div>
+            </form>
+        </md-card-content>
+    </md-card>    
 </div>
 
 

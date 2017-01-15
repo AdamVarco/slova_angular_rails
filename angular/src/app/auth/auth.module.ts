@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
 
 import { Angular2TokenService, A2tUiModule } from 'angular2-token';
 
@@ -13,10 +14,12 @@ import { PasswordUpdateComponent } from './password_update/password_update.compo
 
 @NgModule({
     imports: [
+        MaterialModule.forRoot(),
         CommonModule,
         FormsModule,
         RouterModule
     ],
+    exports: [ MaterialModule ],
     declarations: [
         NewUserComponent,
         SignInComponent,

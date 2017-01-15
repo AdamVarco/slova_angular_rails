@@ -1,18 +1,17 @@
-
-img {
-    width:75%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-h3 {
+h2 {
     text-align: center;
 }
 button {
-    text-align: center;
+    
+    background-color: #28B7FF;
+    margin: 3em;
+    color: white;
+    height: auto;
+    display: block;
+    text-align: center; 
+    float: none;
     margin: auto;
-    width: 75%;
+    border-top: 2em;
 }
 
 

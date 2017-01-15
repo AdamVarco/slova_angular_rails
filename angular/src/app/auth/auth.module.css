@@ -1,4 +1,9 @@
-.col-centered{
-    float: none;
-    margin: 0 auto;
+.auth-button {
+    position: relative;
+    margin-left: 3px;
+    width: 10em;
+}
+
+.card-container {
+  padding: 2em;
 }

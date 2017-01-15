@@ -1,17 +1,15 @@
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card card-block card-success card-inverse">
-                <h4 class="card-title">{{ _tokenService.currentUserData?.email | namePipe }}'s Dashboard </h4>
-
-                <div class="row current-user">
-                    <div class="col-md-6">
-                        <p><b>Your translations:</b> {{ translations?.length }} </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="col-md-12 col-centered" style="padding-top:15px">
+    <md-card>
+        <md-card-title>{{ _tokenService.currentUserData?.email | namePipe }}'s Dashboard </md-card-title>
+        <md-card-content>
+            <md-nav-list>
+                <md-list-item>
+                    <h3 md-line>
+                        <span> Total words: </span>
+                        <span> {{ translations?.length }} </span>
+                    </h3>
+                </md-list-item>
+                </md-nav-list>
+        </md-card-content>
+    </md-card>
 </div>

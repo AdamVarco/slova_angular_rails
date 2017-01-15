@@ -1,19 +1,18 @@
+.content-area {
+  overflow: auto;
+  height: 375px;
+  padding: 0 2em 0 0
+}
+
 .search {
-  width: 25em;
-  position: relative;
-  height: 2.5em;
   left: 2em;
-  margin: .25em;
-  padding: 0.3em 0.3em 0.3em 0;
   width: 95%;
-  align-self: center;
-  height: 1.5em;
   margin: 1.5em 0 1.5em 0;
   font-size: medium;
 }
 
 #search-container {
-  padding: 1em 1em 2em 1em;
+  padding: 0em 3em 1em 1em;
   opacity: 1;
 }
 

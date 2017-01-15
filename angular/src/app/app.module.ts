@@ -29,6 +29,7 @@ import { TestsComponent } from './tests/tests.component';
 import { TranslationsComponent } from './translations/translations.component';
 
 // Presentation components
+import { FooterComponent } from './footer/footer.component';
 import { TranslationListComponent } from './translations/translation-list/translation-list.component';
 import { CustomPipe } from './dashboard/name.pipe';
 
@@ -36,6 +37,7 @@ import { CustomPipe } from './dashboard/name.pipe';
 import { TranslationService } from './_services/translation.service';
 import { NewTranslationService } from './_services/new_translation.service';
 import { UserService } from './_services/user.service';
+
 
 
 @NgModule({
@@ -53,6 +55,7 @@ import { UserService } from './_services/user.service';
     AppComponent,
     CustomPipe,
     DashboardComponent,
+    FooterComponent,
     LandingComponent,
     MenuComponent,
     NavigationComponent, 
