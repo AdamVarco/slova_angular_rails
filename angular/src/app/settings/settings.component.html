@@ -2,9 +2,10 @@
 	<md-card class="col-centered">
 		<md-card-title class="card-title" style="text-align:center">Your account</md-card-title>
 		<md-card-content>
-			<div class="alert alert-success" *ngIf="saveSuccess">
+			<div  *ngIf="saveSuccess" class="alert alert-success">
     			<strong>Success!</strong>
 			</div>
+			<div *ngIf="!this.currentUser.target_lang || !this.currentUser.native_lang" class="alert alert-danger">Please set your native and target languages</div>
 			<form #userSettingsForm="ngForm" (ngSubmit)="saveUserSettings(userSettingsForm.value)">
 				<div>
 					<label for="formGroupExampleInput">What is your NATIVE language?</label>

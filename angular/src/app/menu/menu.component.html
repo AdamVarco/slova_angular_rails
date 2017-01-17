@@ -12,7 +12,7 @@
         <button md-menu-item *ngIf="!_tokenService.currentAuthData" routerLink="/sign_in" routerLinkActive="active">Sign In</button>
         <button md-menu-item *ngIf="!_tokenService.currentAuthData" routerLink="/new_user" routerLinkActive="active">Register</button>
         <button md-menu-item *ngIf="_tokenService.currentAuthData" routerLink="/settings">Settings</button>
-        <button md-menu-item *ngIf="_tokenService.currentAuthData">Help</button>
+        <!--<button md-menu-item *ngIf="_tokenService.currentAuthData">Help</button>-->
         <button md-menu-item *ngIf="_tokenService.currentAuthData" routerLink="/sign_in" routerLinkActive="active" (click)="signOut()">Sign Out</button>
       </md-menu>
     </div>

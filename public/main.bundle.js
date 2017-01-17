@@ -356,7 +356,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isFunction_1 = __webpack_require__(288);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var Observer_1 = __webpack_require__(884);
 var rxSubscriber_1 = __webpack_require__(182);
 /**
@@ -1135,7 +1135,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(1);
 var Subscriber_1 = __webpack_require__(3);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var ObjectUnsubscribedError_1 = __webpack_require__(287);
 var SubjectSubscription_1 = __webpack_require__(886);
 var rxSubscriber_1 = __webpack_require__(182);
@@ -2853,6 +2853,30 @@ var DomAdapter = (function () {
 /* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(661);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["a"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["b"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["c"]; });
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the router package.
+ */
+
+//# sourceMappingURL=index.js.map
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
 var anObject       = __webpack_require__(8)
   , IE8_DOM_DEFINE = __webpack_require__(450)
   , toPrimitive    = __webpack_require__(82)
@@ -2871,7 +2895,7 @@ exports.f = __webpack_require__(28) ? Object.defineProperty : function definePro
 };
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2880,7 +2904,7 @@ var isArray_1 = __webpack_require__(51);
 var isObject_1 = __webpack_require__(1135);
 var isFunction_1 = __webpack_require__(288);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var UnsubscriptionError_1 = __webpack_require__(510);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
@@ -3030,7 +3054,7 @@ exports.Subscription = Subscription;
 //# sourceMappingURL=Subscription.js.map
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -3040,7 +3064,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3098,36 +3122,12 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=index.js.map
 
 /***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index__ = __webpack_require__(661);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(exports, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__src_index__["c"]; });
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the router package.
- */
-
-//# sourceMappingURL=index.js.map
-
-/***/ },
 /* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var tryCatchTarget;
 function tryCatcher() {
     try {
@@ -6104,7 +6104,7 @@ module.exports = function(it){
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-var dP         = __webpack_require__(20)
+var dP         = __webpack_require__(21)
   , createDesc = __webpack_require__(81);
 module.exports = __webpack_require__(28) ? function(object, key, value){
   return dP.f(object, key, createDesc(1, value));
@@ -6862,7 +6862,7 @@ var ResponseContentType;
 var META     = __webpack_require__(122)('meta')
   , isObject = __webpack_require__(13)
   , has      = __webpack_require__(32)
-  , setDesc  = __webpack_require__(20).f
+  , setDesc  = __webpack_require__(21).f
   , id       = 0;
 var isExtensible = Object.isExtensible || function(){
   return true;
@@ -9727,7 +9727,7 @@ function advanceActivatedRoute(route) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_share__ = __webpack_require__(275);
@@ -21695,7 +21695,7 @@ exports.f = {}.propertyIsEnumerable;
 /* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
-var def = __webpack_require__(20).f
+var def = __webpack_require__(21).f
   , has = __webpack_require__(32)
   , TAG = __webpack_require__(14)('toStringTag');
 
@@ -21806,7 +21806,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(10);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * @class AsyncSubject<T>
  */
@@ -22137,7 +22137,7 @@ __webpack_require__(999);
 __webpack_require__(1000);
 __webpack_require__(1001);
 /* tslint:disable:no-unused-variable */
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 exports.Subscription = Subscription_1.Subscription;
 var Subscriber_1 = __webpack_require__(3);
 exports.Subscriber = Subscriber_1.Subscriber;
@@ -31785,7 +31785,7 @@ function sanitizeSrcset(srcset) {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_state__ = __webpack_require__(92);
@@ -32177,7 +32177,7 @@ var A2tFormService = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
@@ -32585,7 +32585,7 @@ module.exports = {
 "use strict";
 'use strict';
 var global      = __webpack_require__(17)
-  , dP          = __webpack_require__(20)
+  , dP          = __webpack_require__(21)
   , DESCRIPTORS = __webpack_require__(28)
   , SPECIES     = __webpack_require__(14)('species');
 
@@ -32675,7 +32675,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(10);
 var Observable_1 = __webpack_require__(1);
 var Subscriber_1 = __webpack_require__(3);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * @class ConnectableObservable<T>
  */
@@ -47695,7 +47695,7 @@ var MdSnackBarRef = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__snack_bar_config__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__snack_bar_ref__ = __webpack_require__(398);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__snack_bar_container__ = __webpack_require__(397);
@@ -48118,7 +48118,7 @@ var ResourceLoaderImpl = (function (_super) {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_dom_animation_driver__ = __webpack_require__(245);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_dom_web_animations_driver__ = __webpack_require__(650);
@@ -48659,7 +48659,7 @@ function parseCookieValue(cookieStr, name) {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dom_dom_adapter__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__history__ = __webpack_require__(645);
@@ -49771,7 +49771,7 @@ var RouterOutlet = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_router_link__ = __webpack_require__(251);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_router_link_active__ = __webpack_require__(418);
@@ -50241,7 +50241,7 @@ var A2tResetPasswordComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular2_token_service__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__a2t_shared__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4____ = __webpack_require__(93);
@@ -50297,7 +50297,7 @@ var A2tSignInComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular2_token_service__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__a2t_shared__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4____ = __webpack_require__(93);
@@ -50385,8 +50385,8 @@ var A2tUiComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3____ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__a2t_sign_in_a2t_sign_in_component__ = __webpack_require__(423);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__a2t_sign_up_a2t_sign_up_component__ = __webpack_require__(424);
@@ -50441,7 +50441,7 @@ var A2tUiModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular2_token_service__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__a2t_shared__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4____ = __webpack_require__(93);
@@ -50604,7 +50604,7 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__landing_landing_component__ = __webpack_require__(436);
@@ -50716,7 +50716,7 @@ var AppRoutingModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NewUserComponent; });
@@ -50769,7 +50769,7 @@ var NewUserComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__(254);
@@ -50825,7 +50825,7 @@ var PasswordUpdateComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ResetPasswordComponent; });
@@ -50877,7 +50877,7 @@ var ResetPasswordComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return SignInComponent; });
@@ -51064,7 +51064,7 @@ var SettingsComponent = (function () {
     }
     SettingsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        return this._userService.setUser().subscribe(function (res) { return _this.currentUser = res; });
+        this._userService.setUser().subscribe(function (res) { return _this.currentUser = res; });
     };
     SettingsComponent.prototype.saveUserSettings = function (settings) {
         var _this = this;
@@ -51130,9 +51130,10 @@ var TestsComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__ = __webpack_require__(177);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_new_translation_service__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_new_translation_service__ = __webpack_require__(428);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NewTranslationComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51146,31 +51147,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NewTranslationComponent = (function () {
-    function NewTranslationComponent(newTranslationService) {
+    function NewTranslationComponent(newTranslationService, router) {
         this.newTranslationService = newTranslationService;
+        this.router = router;
     }
     NewTranslationComponent.prototype.translationSearch = function (query) {
         var _this = this;
         this.newTranslationService.searchTranslation(query)
             .subscribe(function (data) {
             _this.yandexTranslation = data;
+            if (_this.yandexTranslation._body == "null") {
+                _this.redirectToSettings();
+            }
         }, function (error) {
             console.log("Error getting translation");
-            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Rx__["Observable"].throw(error);
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error);
         });
     };
     NewTranslationComponent.prototype.saveTranslation = function () {
         var _this = this;
         this.newTranslationService.saveTranslation(this.yandexTranslation)
             .subscribe(function (success) {
-            _this.yandexTranslation = undefined;
+            _this.cancelTranslation();
         }, function (error) {
             console.log("Error saving translation");
+            _this.cancelTranslation();
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(error);
         });
     };
     NewTranslationComponent.prototype.cancelTranslation = function () {
         this.yandexTranslation = undefined;
+    };
+    NewTranslationComponent.prototype.redirectToSettings = function () {
+        this.router.navigate(['/settings']);
     };
     NewTranslationComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -51178,12 +51189,12 @@ var NewTranslationComponent = (function () {
             selector: 'app-new-translation',
             template: __webpack_require__(880),
             styles: [__webpack_require__(863)],
-            providers: [__WEBPACK_IMPORTED_MODULE_2__services_new_translation_service__["a" /* NewTranslationService */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_3__services_new_translation_service__["a" /* NewTranslationService */]]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_new_translation_service__["a" /* NewTranslationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__services_new_translation_service__["a" /* NewTranslationService */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_new_translation_service__["a" /* NewTranslationService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_new_translation_service__["a" /* NewTranslationService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], NewTranslationComponent);
     return NewTranslationComponent;
-    var _a;
+    var _a, _b;
 }());
 
 
@@ -51370,7 +51381,7 @@ module.exports = function(it){
 
 "use strict";
 'use strict';
-var dP          = __webpack_require__(20).f
+var dP          = __webpack_require__(21).f
   , create      = __webpack_require__(96)
   , redefineAll = __webpack_require__(267)
   , ctx         = __webpack_require__(95)
@@ -51518,7 +51529,7 @@ module.exports = {
 
 "use strict";
 'use strict';
-var $defineProperty = __webpack_require__(20)
+var $defineProperty = __webpack_require__(21)
   , createDesc      = __webpack_require__(81);
 
 module.exports = function(object, index, value){
@@ -51698,7 +51709,7 @@ module.exports = !$assign || __webpack_require__(12)(function(){
 /* 459 */
 /***/ function(module, exports, __webpack_require__) {
 
-var dP       = __webpack_require__(20)
+var dP       = __webpack_require__(21)
   , anObject = __webpack_require__(8)
   , getKeys  = __webpack_require__(97);
 
@@ -51913,7 +51924,7 @@ module.exports = __webpack_require__(256)('Map', function(get){
 /***/ function(module, exports, __webpack_require__) {
 
 // 21.2.5.3 get RegExp.prototype.flags()
-if(__webpack_require__(28) && /./g.flags != 'g')__webpack_require__(20).f(RegExp.prototype, 'flags', {
+if(__webpack_require__(28) && /./g.flags != 'g')__webpack_require__(21).f(RegExp.prototype, 'flags', {
   configurable: true,
   get: __webpack_require__(259)
 });
@@ -52088,7 +52099,7 @@ var global         = __webpack_require__(17)
   , _create        = __webpack_require__(96)
   , gOPNExt        = __webpack_require__(460)
   , $GOPD          = __webpack_require__(72)
-  , $DP            = __webpack_require__(20)
+  , $DP            = __webpack_require__(21)
   , $keys          = __webpack_require__(97)
   , gOPD           = $GOPD.f
   , dP             = $DP.f
@@ -52735,7 +52746,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var root_1 = __webpack_require__(29);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var Observable_1 = __webpack_require__(1);
 var Subscriber_1 = __webpack_require__(3);
 var map_1 = __webpack_require__(84);
@@ -53223,7 +53234,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(3);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 /**
  * Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from the previous item.
  * If a comparator function is provided, then it will be called for each item to test for whether or not that value should be emitted.
@@ -64749,7 +64760,7 @@ var MdButtonToggleModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core__ = __webpack_require__(9);
 /* unused harmony export MdButton */
 /* unused harmony export MdAnchor */
@@ -65165,7 +65176,7 @@ var MdCardModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_coersion_boolean_property__ = __webpack_require__(234);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core__ = __webpack_require__(9);
@@ -67448,7 +67459,7 @@ var MdIconModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
@@ -68185,7 +68196,7 @@ var fadeInItems = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_cor
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu_directive__ = __webpack_require__(387);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu_item__ = __webpack_require__(244);
@@ -68390,7 +68401,7 @@ var MaterialModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* unused harmony export MdProgressBar */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MdProgressBarModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -68854,7 +68865,7 @@ var MdProgressCircleModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_coersion_boolean_property__ = __webpack_require__(234);
@@ -69343,7 +69354,7 @@ var MdRadioModule = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core__ = __webpack_require__(9);
 /* unused harmony export MdDuplicatedSidenavError */
 /* unused harmony export MdSidenav */
@@ -70868,7 +70879,7 @@ var MdTabLabel = (function (_super) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tab_label__ = __webpack_require__(633);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tab_label_wrapper__ = __webpack_require__(632);
@@ -74772,8 +74783,8 @@ var A2tLinksComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__a2t_form__ = __webpack_require__(668);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__a2t_links_a2t_links_component__ = __webpack_require__(670);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__a2t_error_a2t_error_component__ = __webpack_require__(665);
@@ -74945,7 +74956,7 @@ var UPDATE_PASSWORD_FORM = [
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular2_token_service__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__a2t_ui_component__ = __webpack_require__(425);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__a2t_sign_in_a2t_sign_in_component__ = __webpack_require__(423);
@@ -75105,8 +75116,8 @@ var AppModule = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_material__ = __webpack_require__(383);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_token__);
@@ -75257,7 +75268,7 @@ var FooterComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_token___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_token__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return MenuComponent; });
@@ -75300,7 +75311,7 @@ var MenuComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavigationComponent; });
@@ -75323,7 +75334,7 @@ var NavigationComponent = (function () {
         this.tabLinks = [
             { label: 'Dashboard', link: 'dashboard' },
             { label: 'Translations', link: 'translations' },
-            { label: 'Tests', link: 'tests' },
+            // {label: 'Tests', link: 'tests'},
             { label: 'Add Word', link: 'new_translation' }
         ];
         this.activeLinkIndex = 0;
@@ -75335,7 +75346,7 @@ var NavigationComponent = (function () {
                 label: 'Translations',
                 disabled: true },
             {
-                label: 'Translations',
+                label: 'Tests',
                 disabled: true },
             {
                 label: 'Add Word',
@@ -76097,7 +76108,7 @@ var global         = __webpack_require__(17)
   , core           = __webpack_require__(16)
   , LIBRARY        = __webpack_require__(264)
   , wksExt         = __webpack_require__(466)
-  , defineProperty = __webpack_require__(20).f;
+  , defineProperty = __webpack_require__(21).f;
 module.exports = function(name){
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if(name.charAt(0) != '_' && !(name in $Symbol))defineProperty($Symbol, name, {value: wksExt.f(name)});
@@ -76600,7 +76611,7 @@ var isObject       = __webpack_require__(13)
   , HAS_INSTANCE   = __webpack_require__(14)('hasInstance')
   , FunctionProto  = Function.prototype;
 // 19.2.3.6 Function.prototype[@@hasInstance](V)
-if(!(HAS_INSTANCE in FunctionProto))__webpack_require__(20).f(FunctionProto, HAS_INSTANCE, {value: function(O){
+if(!(HAS_INSTANCE in FunctionProto))__webpack_require__(21).f(FunctionProto, HAS_INSTANCE, {value: function(O){
   if(typeof this != 'function' || !isObject(O))return false;
   if(!isObject(this.prototype))return O instanceof this;
   // for environment w/o native `@@hasInstance` logic enough `instanceof`, but add this:
@@ -76612,7 +76623,7 @@ if(!(HAS_INSTANCE in FunctionProto))__webpack_require__(20).f(FunctionProto, HAS
 /* 741 */
 /***/ function(module, exports, __webpack_require__) {
 
-var dP         = __webpack_require__(20).f
+var dP         = __webpack_require__(21).f
   , createDesc = __webpack_require__(81)
   , has        = __webpack_require__(32)
   , FProto     = Function.prototype
@@ -76933,7 +76944,7 @@ var global            = __webpack_require__(17)
   , fails             = __webpack_require__(12)
   , gOPN              = __webpack_require__(120).f
   , gOPD              = __webpack_require__(72).f
-  , dP                = __webpack_require__(20).f
+  , dP                = __webpack_require__(21).f
   , $trim             = __webpack_require__(170).trim
   , NUMBER            = 'Number'
   , $Number           = global[NUMBER]
@@ -77264,7 +77275,7 @@ $export($export.S + $export.F * !__webpack_require__(28), 'Object', {definePrope
 
 var $export = __webpack_require__(2);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(28), 'Object', {defineProperty: __webpack_require__(20).f});
+$export($export.S + $export.F * !__webpack_require__(28), 'Object', {defineProperty: __webpack_require__(21).f});
 
 /***/ },
 /* 775 */
@@ -77510,7 +77521,7 @@ $export($export.S + $export.F * (NEW_TARGET_BUG || ARGS_BUG), 'Reflect', {
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
-var dP          = __webpack_require__(20)
+var dP          = __webpack_require__(21)
   , $export     = __webpack_require__(2)
   , anObject    = __webpack_require__(8)
   , toPrimitive = __webpack_require__(82);
@@ -77720,7 +77731,7 @@ if(setProto)$export($export.S, 'Reflect', {
 /***/ function(module, exports, __webpack_require__) {
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
-var dP             = __webpack_require__(20)
+var dP             = __webpack_require__(21)
   , gOPD           = __webpack_require__(72)
   , getPrototypeOf = __webpack_require__(62)
   , has            = __webpack_require__(32)
@@ -77757,7 +77768,7 @@ $export($export.S, 'Reflect', {set: set});
 
 var global            = __webpack_require__(17)
   , inheritIfRequired = __webpack_require__(260)
-  , dP                = __webpack_require__(20).f
+  , dP                = __webpack_require__(21).f
   , gOPN              = __webpack_require__(120).f
   , isRegExp          = __webpack_require__(262)
   , $flags            = __webpack_require__(259)
@@ -78728,7 +78739,7 @@ module.exports = ".content-area {\r\n  overflow: auto;\r\n  height: 375px;\r\n  
 /* 865 */
 /***/ function(module, exports) {
 
-module.exports = ".content-area {\r\n  overflow: auto;\r\n  height: 375px;\r\n  padding: 0 2em 0 0\r\n}\r\n\r\n.search {\r\n  left: 2em;\r\n  width: 95%;\r\n  margin: 1.5em 0 1.5em 0;\r\n  font-size: medium;\r\n}\r\n\r\n#search-container {\r\n  padding: 0em 3em 1em 1em;\r\n  opacity: 1;\r\n}\r\n\r\n#translation-list-container {\r\n  padding: 1em;\r\n}\r\n"
+module.exports = ".search {\r\n  left: 2em;\r\n  width: 95%;\r\n  margin: 1.5em 0 1.5em 0;\r\n  font-size: medium;\r\n}\r\n\r\n#search-container {\r\n  padding: 0em 3em 1em 1em;\r\n  opacity: 1;\r\n}\r\n\r\n#translation-list-container {\r\n  padding: 1em;\r\n}\r\n"
 
 /***/ },
 /* 866 */
@@ -78740,7 +78751,7 @@ module.exports = "<div>\r\n  <app-menu></app-menu>\r\n  <div *ngIf=\"_tokenServi
 /* 867 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n\t<md-card class=\"col-centered\">\r\n\t\t<md-card-title>Create your Account</md-card-title>\r\n\t\t<md-card-subtitle>Continue your language-learning journey with Slova, bringing you personal and intelligent tools that will accelerate your progress in the languages you love.</md-card-subtitle>\r\n\t\t\t<md-card-content>\r\n\t\t\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">There was a problem registering your account. Please try again.</div>\r\n\r\n\t\t\t\t<form #registerForm=\"ngForm\" (ngSubmit)=\"registerUser()\">\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\tminlength=\"3\"\r\n\t\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.email\"\r\n\t\t\t\t\t\t\tname=\"email\">\r\n\t\t\t\t\t</div><br>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\t\t\tminlength=\"8\"\r\n\t\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.password\"\r\n\t\t\t\t\t\t\tname=\"password\">\r\n\t\t\t\t\t</div><br>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Password Confirmation\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.passwordConfirmation\"\r\n\t\t\t\t\t\t\tname=\"passwordConfirmation\">\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\t\t[disabled]=\"!registerForm.form.valid\">Register\r\n\t\t\t\t\t\t</button>\r\n\t\t\t\t\t</md-card-actions>\r\n\t\t\t\t</form>\r\n\t\t\t</md-card-content>\r\n\t</md-card>\r\n</div>"
+module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n\t<md-card class=\"col-centered\">\r\n\t\t<md-card-title>Create your Account</md-card-title>\r\n\t\t<md-card-subtitle>Continue your language-learning journey with Slova, bringing you personal and intelligent tools that will accelerate your progress in the languages you love.</md-card-subtitle>\r\n\t\t\t<md-card-content>\r\n\t\t\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">There was a problem registering your account. Please try again.</div>\r\n\r\n\t\t\t\t<form #registerForm=\"ngForm\" (ngSubmit)=\"registerUser()\">\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\tminlength=\"3\"\r\n\t\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.email\"\r\n\t\t\t\t\t\t\tname=\"email\">\r\n\t\t\t\t\t</div><br>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<div [hidden]=\"password.valid || password.pristine\" style=\"color:red\">\r\n    \t\t\t\t\t\tPassword must be at least 8 characters\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\t\t\tminlength=\"8\"\r\n\t\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.password\"\r\n\t\t\t\t\t\t\tname=\"password\"\r\n\t\t\t\t\t\t\t#password=\"ngModel\">\r\n\t\t\t\t\t</div><br>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Password Confirmation\"\r\n\t\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t\t[(ngModel)]=\"_registerData.passwordConfirmation\"\r\n\t\t\t\t\t\t\tname=\"passwordConfirmation\">\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\t\t[disabled]=\"!registerForm.form.valid\">Register\r\n\t\t\t\t\t\t</button>\r\n\t\t\t\t\t</md-card-actions>\r\n\t\t\t\t</form>\r\n\t\t\t</md-card-content>\r\n\t</md-card>\r\n</div>"
 
 /***/ },
 /* 868 */
@@ -78758,7 +78769,7 @@ module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\
 /* 870 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n<md-card class=\"col-centered\">\r\n\t<md-card-title>Sign In</md-card-title>\r\n\t<md-card-subtitle>Your personal account gives you access to the Slova learning portal: your words, tests, dashboard, and translator are just a click away</md-card-subtitle>\r\n\t\t<md-card-content>\r\n\t\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">Invalid login credentials. Please try again.</div>\r\n\r\n\t\t\t<form #signInForm=\"ngForm\" (ngSubmit)=\"signIn()\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\t\tminlength=\"3\"\r\n\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t[(ngModel)]=\"_signInData.email\"\r\n\t\t\t\t\t\tname=\"email\">\r\n\t\t\t\t</div><br>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\t\tminlength=\"8\"\r\n\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t[(ngModel)]=\"_signInData.password\"\r\n\t\t\t\t\t\tname=\"password\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t<button md-raised-button color=\"primary\" \r\n\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\t[disabled]=\"!signInForm.form.valid\">Sign In\r\n\t\t\t\t\t</button><br>\r\n\t\t\t\t\t<button md-button style=\"margin:0px\" (click)=\"resetPassword()\"\r\n\t\t\t\t\t\ttype=\"button\">Forgotten Password?\r\n\t\t\t\t\t</button>\r\n\t\t\t\t</md-card-actions>\r\n\t\t\t</form>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n\t</div>\r\n"
+module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n<md-card class=\"col-centered\">\r\n\t<md-card-title>Sign In</md-card-title>\r\n\t<md-card-subtitle>Your personal account gives you access to the Slova learning portal: your words, tests, dashboard, and translator are just a click away</md-card-subtitle>\r\n\t\t<md-card-content>\r\n\t\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">Invalid login credentials. Please try again.</div>\r\n\r\n\t\t\t<form #signInForm=\"ngForm\" (ngSubmit)=\"signIn()\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<input type=\"text\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Email\"\r\n\t\t\t\t\t\tminlength=\"3\"\r\n\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t[(ngModel)]=\"_signInData.email\"\r\n\t\t\t\t\t\tname=\"email\">\r\n\t\t\t\t</div><br>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<div [hidden]=\"password.valid || password.pristine\" style=\"color:red\">\r\n    \t\t\t\t\tPassword must be at least 8 characters\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\t\tminlength=\"8\"\r\n\t\t\t\t\t\tmaxlength=\"25\"\r\n\t\t\t\t\t\trequired\r\n\t\t\t\t\t\t[(ngModel)]=\"_signInData.password\"\r\n\t\t\t\t\t\tname=\"password\"\r\n\t\t\t\t\t\t#password=\"ngModel\">\r\n\t\t\t\t</div>\r\n\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t<button md-raised-button color=\"primary\" \r\n\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\t[disabled]=\"!signInForm.form.valid\">Sign In\r\n\t\t\t\t\t</button><br>\r\n\t\t\t\t\t<button md-button style=\"margin:0px\" (click)=\"resetPassword()\"\r\n\t\t\t\t\t\ttype=\"button\">Forgotten Password?\r\n\t\t\t\t\t</button>\r\n\t\t\t\t</md-card-actions>\r\n\t\t\t</form>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n\t</div>\r\n"
 
 /***/ },
 /* 871 */
@@ -78782,7 +78793,7 @@ module.exports = "<div *ngIf=\"!_tokenService.currentAuthData\">\r\n    <div sty
 /* 874 */
 /***/ function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"../assets/slova_logo_text_v2.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Register</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/settings\">Settings</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
+module.exports = "<md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"../assets/slova_logo_text_v2.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Register</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/settings\">Settings</button>\r\n        <!--<button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>-->\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
 
 /***/ },
 /* 875 */
@@ -78794,7 +78805,7 @@ module.exports = "<div class=\"demo-nav-bar\">\r\n  <nav md-tab-nav-bar text-ali
 /* 876 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n\t<md-card class=\"col-centered\">\r\n\t\t<md-card-title class=\"card-title\" style=\"text-align:center\">Your account</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<div class=\"alert alert-success\" *ngIf=\"saveSuccess\">\r\n    \t\t\t<strong>Success!</strong>\r\n\t\t\t</div>\r\n\t\t\t<form #userSettingsForm=\"ngForm\" (ngSubmit)=\"saveUserSettings(userSettingsForm.value)\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<label for=\"formGroupExampleInput\">What is your NATIVE language?</label>\r\n\t\t\t\t\t<select [(ngModel)]=\"currentUser.native_lang\"\r\n\t\t\t\t\t\tname=\"native_lang\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Native Language\"\r\n\t\t\t\t\t\trequired>\r\n\t\t\t\t\t\t<option *ngFor=\"let lang of langs\" [(ngValue)]=\"lang.value\">{{ lang.display }}</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t\t<label for=\"formGroupExampleInput\">What language are you trying to learn?</label>\r\n\t\t\t\t\t\t<select [(ngModel)]=\"currentUser.target_lang\"\r\n\t\t\t\t\t\t\tname=\"target_lang\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Target Language\"\r\n\t\t\t\t\t\t\trequired>\r\n\t\t\t\t\t\t\t<option *ngFor=\"let lang of langs\" [(ngValue)]=\"lang.value\">{{ lang.display }}</option>\r\n\t\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\tclass=\"btn btn-primary\"\r\n\t\t\t\t\t\t[disabled]=\"!userSettingsForm.form.valid\">Save\r\n\t\t\t\t\t</button>\r\n\t\t\t\t</md-card-actions>\r\n\t\t\t</form>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n\t<md-card class=\"col-centered\">\r\n\t\t<md-card-title class=\"card-title\" style=\"text-align:center\">Your account</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<div  *ngIf=\"saveSuccess\" class=\"alert alert-success\">\r\n    \t\t\t<strong>Success!</strong>\r\n\t\t\t</div>\r\n\t\t\t<div *ngIf=\"!this.currentUser.target_lang || !this.currentUser.native_lang\" class=\"alert alert-danger\">Please set your native and target languages</div>\r\n\t\t\t<form #userSettingsForm=\"ngForm\" (ngSubmit)=\"saveUserSettings(userSettingsForm.value)\">\r\n\t\t\t\t<div>\r\n\t\t\t\t\t<label for=\"formGroupExampleInput\">What is your NATIVE language?</label>\r\n\t\t\t\t\t<select [(ngModel)]=\"currentUser.native_lang\"\r\n\t\t\t\t\t\tname=\"native_lang\"\r\n\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\tplaceholder=\"Native Language\"\r\n\t\t\t\t\t\trequired>\r\n\t\t\t\t\t\t<option *ngFor=\"let lang of langs\" [(ngValue)]=\"lang.value\">{{ lang.display }}</option>\r\n\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div>\r\n\t\t\t\t\t\t<label for=\"formGroupExampleInput\">What language are you trying to learn?</label>\r\n\t\t\t\t\t\t<select [(ngModel)]=\"currentUser.target_lang\"\r\n\t\t\t\t\t\t\tname=\"target_lang\"\r\n\t\t\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\t\t\tplaceholder=\"Target Language\"\r\n\t\t\t\t\t\t\trequired>\r\n\t\t\t\t\t\t\t<option *ngFor=\"let lang of langs\" [(ngValue)]=\"lang.value\">{{ lang.display }}</option>\r\n\t\t\t\t\t\t</select>\r\n\t\t\t\t</div>\r\n\t\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t\tclass=\"btn btn-primary\"\r\n\t\t\t\t\t\t[disabled]=\"!userSettingsForm.form.valid\">Save\r\n\t\t\t\t\t</button>\r\n\t\t\t\t</md-card-actions>\r\n\t\t\t</form>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n</div>\r\n\r\n"
 
 /***/ },
 /* 877 */
@@ -78954,7 +78965,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -80346,7 +80357,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(1);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var AsyncSubject_1 = __webpack_require__(174);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -80516,7 +80527,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(1);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var AsyncSubject_1 = __webpack_require__(174);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -81004,8 +81015,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(1);
 var tryCatch_1 = __webpack_require__(25);
 var isFunction_1 = __webpack_require__(288);
-var errorObject_1 = __webpack_require__(22);
-var Subscription_1 = __webpack_require__(21);
+var errorObject_1 = __webpack_require__(23);
+var Subscription_1 = __webpack_require__(22);
 function isNodeStyleEventEmmitter(sourceObj) {
     return !!sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';
 }
@@ -81140,7 +81151,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(1);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -82333,11 +82344,11 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Subject_1 = __webpack_require__(10);
 var Subscriber_1 = __webpack_require__(3);
 var Observable_1 = __webpack_require__(1);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var root_1 = __webpack_require__(29);
 var ReplaySubject_1 = __webpack_require__(176);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var assign_1 = __webpack_require__(1134);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -82702,7 +82713,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -83333,7 +83344,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var subscribeToResult_1 = __webpack_require__(6);
 var OuterSubscriber_1 = __webpack_require__(5);
 /**
@@ -83491,9 +83502,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -85174,7 +85185,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -85330,7 +85341,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(3);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * Returns an Observable that mirrors the source Observable, but will call a specified function when
  * the source terminates on complete or error.
@@ -85426,7 +85437,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(3);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var Observable_1 = __webpack_require__(1);
 var Subject_1 = __webpack_require__(10);
 var Map_1 = __webpack_require__(1132);
@@ -85979,7 +85990,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var subscribeToResult_1 = __webpack_require__(6);
 var OuterSubscriber_1 = __webpack_require__(5);
 /**
@@ -86496,7 +86507,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(10);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -86683,7 +86694,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(10);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -87098,7 +87109,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subscriber_1 = __webpack_require__(3);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 /**
  * Compares all values of two observables in sequence using an optional comparor function
  * and returns an observable of a single boolean value representing whether or not the two sequences
@@ -89373,9 +89384,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(10);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -89560,7 +89571,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Subject_1 = __webpack_require__(10);
 var tryCatch_1 = __webpack_require__(25);
-var errorObject_1 = __webpack_require__(22);
+var errorObject_1 = __webpack_require__(23);
 var OuterSubscriber_1 = __webpack_require__(5);
 var subscribeToResult_1 = __webpack_require__(6);
 /**
@@ -89846,7 +89857,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 /**
  * A unit of work to be executed in a {@link Scheduler}. An action is typically
  * created from within a Scheduler and an RxJS user does not need to concern
@@ -90187,7 +90198,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(1);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var SubscriptionLoggable_1 = __webpack_require__(509);
 var applyMixins_1 = __webpack_require__(511);
 /**
@@ -90239,7 +90250,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subject_1 = __webpack_require__(10);
-var Subscription_1 = __webpack_require__(21);
+var Subscription_1 = __webpack_require__(22);
 var SubscriptionLoggable_1 = __webpack_require__(509);
 var applyMixins_1 = __webpack_require__(511);
 /**

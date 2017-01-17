@@ -17,6 +17,9 @@
 							name="email">
 					</div><br>
 					<div>
+						<div [hidden]="password.valid || password.pristine" style="color:red">
+    						Password must be at least 8 characters
+						</div>
 						<input type="password"
 							class="form-control"
 							placeholder="Password"
@@ -24,7 +27,8 @@
 							maxlength="25"
 							required
 							[(ngModel)]="_registerData.password"
-							name="password">
+							name="password"
+							#password="ngModel">
 					</div><br>
 					<div>
 						<input type="password"

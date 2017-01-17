@@ -14,7 +14,7 @@ export class NavigationComponent {
   tabLinks = [
     {label: 'Dashboard', link: 'dashboard'},
     {label: 'Translations', link: 'translations'},
-    {label: 'Tests', link: 'tests'},
+    // {label: 'Tests', link: 'tests'},
     {label: 'Add Word', link: 'new_translation'}
   ];
   activeLinkIndex = 0;
@@ -27,7 +27,7 @@ export class NavigationComponent {
       label: 'Translations',
       disabled: true},
     {
-      label: 'Translations',
+      label: 'Tests',
       disabled: true},
     {
       label: 'Add Word',

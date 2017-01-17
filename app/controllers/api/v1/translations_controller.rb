@@ -34,10 +34,12 @@ class API::V1::TranslationsController < ApplicationController
 
     if !Translation.where(:native => translation.native, :user_id => translation.user_id).blank?
       render json: {
-        status: 500
+        status: 409
       }
     elsif translation.save
-      render json: translation
+      render json: {
+        status: 200
+      }
     else
       render json: {
         status: 500

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
 import { Translation } from '../../_models/translation.model';
@@ -12,18 +13,20 @@ import { NewTranslationService } from '../../_services/new_translation.service';
     providers: [ NewTranslationService ]
 })
 export class NewTranslationComponent {
-
-    public yandexTranslation: {};
+    constructor(private newTranslationService: NewTranslationService, private router: Router) { }
+    
+    public yandexTranslation: any;
     public newTranslation: Translation;
 
-    constructor(private newTranslationService: NewTranslationService) { }
-
-    translationSearch(query: any) {
+    public translationSearch(query: any) {
 
         this.newTranslationService.searchTranslation(query)
             .subscribe(
                 data => {
                     this.yandexTranslation = data;
+                    if (this.yandexTranslation._body == "null") {
+                        this.redirectToSettings();
+                    }
                 },
                 error => { console.log("Error getting translation");
                     return Observable.throw(error);
@@ -31,19 +34,25 @@ export class NewTranslationComponent {
             );  
     }
     
-    saveTranslation(): void {
+    public saveTranslation(): void {
         this.newTranslationService.saveTranslation(this.yandexTranslation)
             .subscribe(
                 success => {
-                    this.yandexTranslation = undefined;
+                    this.cancelTranslation();
                 },
                 error => { 
                     console.log("Error saving translation");
+                    this.cancelTranslation();
+                    return Observable.throw(error);
                 },
             );
     }
 
-    cancelTranslation(): void {
+    public cancelTranslation(): void {
         this.yandexTranslation = undefined;
+    }
+
+    private redirectToSettings(): void {
+        this.router.navigate(['/settings']);
     }
 }

@@ -18,7 +18,6 @@ export class SettingsComponent implements OnInit {
   public currentUser: any = {};
   public errorMessage: string;
   public saveSuccess: boolean;
-  public userdata: any;
 
   public langs = [
       { value: 'be', display: 'Byelorussian' },
@@ -38,7 +37,7 @@ export class SettingsComponent implements OnInit {
   ]
 
   ngOnInit() {
-    return this._userService.setUser().subscribe(res => this.currentUser = res);
+    this._userService.setUser().subscribe(res => this.currentUser = res);
   }
 
   saveUserSettings(settings) {

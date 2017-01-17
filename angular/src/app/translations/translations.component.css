@@ -1,9 +1,3 @@
-.content-area {
-  overflow: auto;
-  height: 375px;
-  padding: 0 2em 0 0
-}
-
 .search {
   left: 2em;
   width: 95%;
