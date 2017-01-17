@@ -1,6 +1,6 @@
 <div class="search-box">
     <md-card class="col-centered"  style="height:300px">
-        <md-card-subtitle style="text-align: center">Add New Word</md-card-subtitle>
+        <md-card-title style="text-align: center">Add New Word</md-card-title>
             <md-card-content>
             <form #searchForm='ngForm' (ngSubmit)="translationSearch(searchForm.value)"  novalidate>
                 <div class="form-group">
@@ -18,18 +18,18 @@
                         <button md-icon-button type="submit" class="search-button" [disabled]="!searchForm.form.valid">
                             <md-icon class="material-icons">youtube_searched_for</md-icon>
                         </button>
-                        <div *ngIf="yandexTranslation">
-                            <h4>{{ yandexTranslation._body }}</h4>
-                            <button md-icon-button (click)="saveTranslation(); searchForm.reset()">
-                                <md-icon class="material-icons">add_circle</md-icon>
-                            </button>
-                            <button md-icon-button (click)="cancelTranslation(); searchForm.reset()">
-                                <md-icon class="material-icons" color="accent">cancel</md-icon>
-                            </button>
-                        </div>
                     </md-card-actions>
                 </div>
             </form>
+                <div *ngIf="yandexTranslation">
+                    <h4>{{ yandexTranslation._body }}</h4>
+                    <button md-icon-button (click)="saveTranslation(); searchForm.reset()">
+                        <md-icon class="material-icons">add_circle</md-icon>
+                    </button>
+                    <button md-icon-button (click)="cancelTranslation(); searchForm.reset()">
+                        <md-icon class="material-icons" color="accent">cancel</md-icon>
+                    </button>
+                </div>   
         </md-card-content>
     </md-card>    
 </div>

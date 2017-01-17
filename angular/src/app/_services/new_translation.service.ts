@@ -18,7 +18,6 @@ export class NewTranslationService {
     public searchTranslation(search) {
         let params = JSON.stringify(search)
         this.userSearch = search;
-
         return this._tokenService.post(this.searchTranslationUrl, params)
                                 .map(res => res)
                                 .catch(this.handleError);
