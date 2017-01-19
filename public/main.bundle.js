@@ -50788,12 +50788,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var PasswordUpdateComponent = (function () {
-    function PasswordUpdateComponent(_tokenService, _userService, _router) {
+    function PasswordUpdateComponent(_tokenService, _userService, _router, activatedRoute) {
         this._tokenService = _tokenService;
         this._userService = _userService;
         this._router = _router;
+        this.activatedRoute = activatedRoute;
         this._updatePasswordData = {};
     }
+    PasswordUpdateComponent.prototype.ngOnInit = function () {
+        this.activatedRoute.queryParams.subscribe(function (params) {
+            var resetToken = params['reset_password_token'];
+            console.log(resetToken);
+        });
+    };
     PasswordUpdateComponent.prototype.updatePassword = function () {
         var _this = this;
         this._output = null;
@@ -50812,10 +50819,10 @@ var PasswordUpdateComponent = (function () {
             template: __webpack_require__(868),
             styles: [__webpack_require__(173)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2_angular2_token__["Angular2TokenService"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === 'function' && _d) || Object])
     ], PasswordUpdateComponent);
     return PasswordUpdateComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 
 
@@ -78757,7 +78764,7 @@ module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\
 /* 868 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n<md-card class=\"col-centered\">\r\n\t<md-card-title>Update password</md-card-title>\r\n\t<md-card-subtitle>Choose a new password and you will be redirected to log back in</md-card-subtitle>\r\n\t\t<md-card-content>\r\n\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">Invalid login credentials. Please try again.</div>\r\n\r\n\t\t<form #updatePasswordForm=\"ngForm\" (ngSubmit)=\"updatePassword()\">\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\tminlength=\"8\"\r\n          maxlength=\"25\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_updatePasswordData.password\"\r\n\t\t\t\t\tname=\"email\">\r\n\t\t\t</div><br>\r\n\t\t\t<div >\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password Confirmation\"\r\n\t\t\t\t\tminlength=\"8\"\r\n          maxlength=\"25\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_updatePasswordData.passwordConfirmation\"\r\n\t\t\t\t\tname=\"password confirmation\">\r\n\t\t\t</div>\r\n\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t[disabled]=\"!updatePasswordForm.form.valid\">Update password\r\n\t\t\t\t</button>\r\n\t\t\t</md-card-actions>\r\n\t\t</form>\r\n\t</md-card-content>\r\n</md-card>\r\n</div>\r\n"
+module.exports = "<div class=\"col-md-6 col-centered\" style=\"padding-top:15px\">\r\n<md-card class=\"col-centered\">\r\n\t<md-card-title>Update password</md-card-title>\r\n\t<md-card-subtitle>Choose a new password and you will be redirected to log back in</md-card-subtitle>\r\n\t\t<md-card-content>\r\n\t\t<div *ngIf=\"this._output\" class=\"alert alert-danger\">Invalid login credentials. Please try again.</div>\r\n\r\n\t\t<form #updatePasswordForm=\"ngForm\" (ngSubmit)=\"updatePassword()\">\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password\"\r\n\t\t\t\t\tminlength=\"8\"\r\n          maxlength=\"25\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_updatePasswordData.password\"\r\n\t\t\t\t\tname=\"email\">\r\n\t\t\t</div><br>\r\n\t\t\t<div >\r\n\t\t\t\t<input type=\"password\"\r\n\t\t\t\t\tclass=\"form-control\"\r\n\t\t\t\t\tplaceholder=\"Password Confirmation\"\r\n\t\t\t\t\tminlength=\"8\"\r\n          maxlength=\"25\"\r\n\t\t\t\t\trequired\r\n\t\t\t\t\t[(ngModel)]=\"_updatePasswordData.passwordConfirmation\"\r\n\t\t\t\t\tname=\"password confirmation\">\r\n\t\t\t</div>\r\n\t\t\t<br>\r\n\t\t\t<md-card-actions class=\"auth-button\">\r\n\t\t\t\t<button md-raised-button color=\"primary\"\r\n\t\t\t\t\ttype=\"submit\"\r\n\t\t\t\t\t[disabled]=\"!updatePasswordForm.form.valid\">Update password\r\n\t\t\t\t</button>\r\n\t\t\t</md-card-actions>\r\n\t\t</form>\r\n\t</md-card-content>\r\n</md-card>\r\n</div>\r\n"
 
 /***/ },
 /* 869 */

@@ -18,7 +18,7 @@ class API::V1::TranslationsController < ApplicationController
       warning = "You have already saved this translation."
       render json: warning
     else
-      pending_translation = TranslationService.new({search: params[:search], native_lang: current_user.native_lang, target_lang: current_user.target_lang}).search
+      pending_translation = translate_service_search
 
       render json: pending_translation
     end
@@ -55,4 +55,15 @@ class API::V1::TranslationsController < ApplicationController
       flash.now[:alert] = "Could not delete translation at this time."
     end
   end
+
+  private
+
+  def translate_service_search
+    TranslationService.new({
+      search: params[:search], 
+      native_lang: current_user.native_lang, 
+      target_lang: current_user.target_lang
+    }).detect_lang
+  end
 end
+
