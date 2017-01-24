@@ -78788,7 +78788,7 @@ module.exports = "<div class=\"col-md-12 col-centered\" style=\"padding-top:15px
 /* 872 */
 /***/ function(module, exports) {
 
-module.exports = "<footer>  \r\n  <p>{{ appVersion }} | <a href=\"https://github.com/SlovaDev/slova_angular_rails\"><img width=\"15px\" height=\"15px\" src=\"/assets/GitHub-Mark-32px.png\"></a></p>\r\n</footer>"
+module.exports = "<footer>  \r\n  <p>{{ appVersion }} | <a href=\"https://github.com/SlovaDev/slova_angular_rails\"><img width=\"15px\" height=\"15px\" src=\"/public/assets/GitHub-Mark-32px.png\"></a></p>\r\n</footer>"
 
 /***/ },
 /* 873 */
@@ -78800,7 +78800,7 @@ module.exports = "<div *ngIf=\"!_tokenService.currentAuthData\">\r\n    <div sty
 /* 874 */
 /***/ function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"/assets/slova_logo_text_v2.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Register</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/settings\">Settings</button>\r\n        <!--<button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>-->\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
+module.exports = "<md-toolbar color=\"primary\">\r\n    <span>\r\n      <img class=\"title\" src=\"/public/assets/slova_logo_text_v2.png\"/>\r\n    </span>\r\n\r\n    <div>\r\n      <button md-icon-button [md-menu-trigger-for]=\"menu\" color=\"accent\">\r\n        <md-icon>menu</md-icon>\r\n      </button>\r\n\r\n      <md-menu x-position=\"before\" #menu=\"mdMenu\">\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\">Sign In</button>\r\n        <button md-menu-item *ngIf=\"!_tokenService.currentAuthData\" routerLink=\"/new_user\" routerLinkActive=\"active\">Register</button>\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/settings\">Settings</button>\r\n        <!--<button md-menu-item *ngIf=\"_tokenService.currentAuthData\">Help</button>-->\r\n        <button md-menu-item *ngIf=\"_tokenService.currentAuthData\" routerLink=\"/sign_in\" routerLinkActive=\"active\" (click)=\"signOut()\">Sign Out</button>\r\n      </md-menu>\r\n    </div>\r\n  </md-toolbar>\r\n"
 
 /***/ },
 /* 875 */
