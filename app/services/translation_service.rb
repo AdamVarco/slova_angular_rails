@@ -23,6 +23,10 @@ class TranslationService < ApplicationController
     end 
   end
 
+  def return_lang
+    Translator.detect(options[:native_word])
+  end
+
   def search_target
     Translator.translate(options[:search], from: options[:native_lang], to: options[:target_lang])
   rescue => e

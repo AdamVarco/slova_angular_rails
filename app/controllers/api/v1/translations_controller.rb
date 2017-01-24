@@ -30,7 +30,13 @@ class API::V1::TranslationsController < ApplicationController
     target_word = params[:target]
     user_id     = params[:user_id]
 
-    translation = Translation.new({native: native_word, target: target_word, user_id: user_id})
+    word_direction = detect_save_direction(native_word)
+
+    if word_direction == current_user.native_lang
+      translation = Translation.new({native: native_word, target: target_word, user_id: user_id})
+    else
+      translation = Translation.new({native: target_word, target: native_word, user_id: user_id})
+    end
 
     if !Translation.where(:native => translation.native, :user_id => translation.user_id).blank?
       render json: {
@@ -64,6 +70,12 @@ class API::V1::TranslationsController < ApplicationController
       native_lang: current_user.native_lang, 
       target_lang: current_user.target_lang
     }).detect_lang
+  end
+
+  def detect_save_direction(native_word)
+    TranslationService.new({
+      native_word: native_word
+    }).return_lang
   end
 end
 
